@@ -30,8 +30,8 @@ HTTP 応答ヘッダーを保存したものを受け取りました。誰がど
 
 ## ヒント
 
-1. `jq` で JSON を絞り込めます。たとえば `jq -r 'select(.event == "login.failure") | [.src_ip, .username] | @tsv' auth.jsonl` で失敗した送信元とアカウントの組が並びます。`sort -u` で重複を消してから送信元ごとに数えましょう。失敗の「回数」が多いことと、試した「アカウントの種類」が多いことは別のことです。
-2. `jq 'select(.src_ip == "<IPアドレス>" and .event == "login.success")' auth.jsonl` のように、送信元と結果で絞り込みます。
+1. まず `head -3 auth.jsonl` でイベントの形を見ます。`jq` の `select()` で失敗のイベントだけを取り出し、送信元とアカウント名の組にしてから数えます。失敗の「回数」が多いことと、試した「アカウントの種類」が多いことは別のことです。
+2. 設問 1 の送信元に絞り、結果が成功のイベントを探します。
 3. `grep -i '^set-cookie' response_headers.txt` で Cookie を並べ、`;` の後ろに並ぶ属性を 1 つずつ見ます。片方だけ欠けているものもあります。
 4. `access.log` を送信元 IP で `grep` し、`POST` の行を見ます。認証ログは UTC、アクセスログは日本時間（9 時間進んでいる）なので、ログイン成功の時刻を合わせてから前後を見比べましょう。
 
@@ -75,8 +75,8 @@ Inside the container the files are under `/evidence`.
 
 ## Hints
 
-1. `jq` filters JSON. For example `jq -r 'select(.event == "login.failure") | [.src_ip, .username] | @tsv' auth.jsonl` lists failed source/account pairs. Remove duplicates with `sort -u` before counting per source. Many failed *attempts* is not the same as many different *accounts*.
-2. Filter by source and outcome, e.g. `jq 'select(.src_ip == "<IP address>" and .event == "login.success")' auth.jsonl`.
+1. Start with `head -3 auth.jsonl` to see what an event looks like. Use `jq`'s `select()` to keep only the failures, turn them into source/account pairs, then count. Many failed *attempts* is not the same as many different *accounts*.
+2. Narrow down to the source from question 1 and look for a successful outcome.
 3. List the cookies with `grep -i '^set-cookie' response_headers.txt` and read the attributes after each `;`. Some cookies lack only one of the two.
 4. `grep` the access log for the source IP address and look at the `POST` lines. The authentication log is UTC and the access log is Japan time (9 hours ahead), so line up the time of the successful login before comparing.
 
