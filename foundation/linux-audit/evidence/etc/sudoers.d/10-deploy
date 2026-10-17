@@ -1,0 +1,4 @@
+# アプリの再起動だけ許可（2025-11 情報システム部 sato）
+Cmnd_Alias APP_CTL = /usr/bin/systemctl restart sample-app.service, \
+                     /usr/bin/systemctl status sample-app.service
+deploy	ALL=(root) NOPASSWD: APP_CTL

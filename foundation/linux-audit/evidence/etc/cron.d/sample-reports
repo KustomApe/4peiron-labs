@@ -1,0 +1,9 @@
+# 営業向けレポート（2024-06 kato さん依頼）
+SHELL=/bin/bash
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+MAILTO=""
+
+30 2 * * *	root	/opt/reports/nightly_export.sh >> /var/log/reports/nightly.log 2>&1
+0 3 * * *	root	/usr/local/sbin/backup-db.sh
+# 旧レポート。2025-01 に停止
+#15 4 * * *	root	/opt/legacy/old_cleanup.sh

@@ -1,0 +1,65 @@
+asset_id,hostname,ip_address,exposure,status,owner_dept,purpose,last_reviewed
+AS-1000,www.example.co.jp,203.0.113.11,public,active,広報部,コーポレートサイト,2026-09-08
+AS-1002,recruit.example.co.jp,203.0.113.12,public,active,人事部,採用サイト,2026-01-29
+AS-1005,SHOP.EXAMPLE.CO.JP,203.0.113.13,public,active,営業企画部,オンラインストア,2025-11-04
+AS-1008,api.example.co.jp,203.0.113.14,public,active,情報システム部,ストア API,2026-06-12
+AS-1012,mail.example.co.jp,203.0.113.15,public,active,情報システム部,メールゲートウェイ,2026-07-25
+AS-1013,smtp.example.co.jp,203.0.113.16,public,active,情報システム部,送信メール,2025-11-17
+AS-1015,autodiscover.example.co.jp,,public,active,情報システム部,メール自動設定,2026-06-27
+AS-1017,vpn.example.co.jp,203.0.113.18,public,active,情報システム部,社員用 VPN,2026-07-18
+AS-1018,partner-vpn.example.co.jp,203.0.113.19,public,active,情報システム部,取引先向け VPN,2025-11-02
+AS-1020,support.example.co.jp,203.0.113.20,public,active,カスタマーサポート部,サポートポータル,2026-09-03
+AS-1021,FAQ.EXAMPLE.CO.JP,,public,active,カスタマーサポート部,FAQ サイト,2026-06-12
+AS-1023,status.example.co.jp,,public,active,情報システム部,稼働状況ページ,2026-08-16
+AS-1027,ir.example.co.jp,203.0.113.23,public,active,経理部,IR 情報,2026-01-30
+AS-1031,news.example.co.jp,203.0.113.24,public,active,広報部,ニュースルーム,2026-02-16
+AS-1033,CDN.EXAMPLE.CO.JP,203.0.113.25,public,active,情報システム部,静的ファイル配信,2025-11-07
+AS-1036,img.example.co.jp,,public,active,マーケティング部,画像配信,2025-10-20
+AS-1038,login.example.co.jp.,203.0.113.27,public,active,情報システム部,会員ログイン,2025-10-23
+AS-1041,SSO.EXAMPLE.CO.JP,203.0.113.28,public,active,情報システム部,社員シングルサインオン,2026-05-08
+AS-1044,portal.example.co.jp,203.0.113.29,public,active,営業企画部,取引先ポータル,2025-08-13
+AS-1048,edi.example.co.jp,203.0.113.30,public,active,製造管理部,受発注 EDI,2025-08-08
+AS-1050,SFTP.EXAMPLE.CO.JP,203.0.113.31,public,active,情報システム部,ファイル受け渡し,2025-10-26
+AS-1053,docs.example.co.jp.,203.0.113.32,public,active,製造管理部,製品マニュアル,2025-11-16
+AS-1054,admin-guide.example.co.jp.,203.0.113.33,public,active,製造管理部,製品の管理者向けマニュアル（公開文書）,2026-04-04
+AS-1056,events.example.co.jp,,public,active,マーケティング部,イベント告知,2025-09-27
+AS-1058,lp.example.co.jp,,public,active,マーケティング部,広告用ランディングページ,2025-12-24
+AS-1061,blog.example.co.jp,,public,active,広報部,公式ブログ,2025-12-21
+AS-1065,careers.example.co.jp.,,public,active,人事部,採用サイト（旧 URL 転送）,2025-08-29
+AS-1069,stg-www.example.co.jp.,203.0.113.38,public,active,広報部,コーポレートサイト検証環境（IP 制限）,2026-05-22
+AS-1071,stg-shop.example.co.jp,203.0.113.39,public,active,営業企画部,ストア検証環境（IP 制限）,2026-05-10
+AS-1074,webmail.example.co.jp,203.0.113.40,public,active,情報システム部,Web メール,2026-08-17
+AS-1078,meet.example.co.jp,,public,active,情報システム部,Web 会議転送,2025-09-18
+AS-1079,survey.example.co.jp,,public,active,マーケティング部,アンケート,2026-03-07
+AS-1083,download.example.co.jp,203.0.113.43,public,active,製造管理部,ソフトウェア配布,2025-09-26
+AS-1087,ntp.example.co.jp.,203.0.113.44,public,active,情報システム部,時刻配信,2026-07-20
+AS-1091,ns1.example.co.jp.,203.0.113.45,public,active,情報システム部,権威 DNS,2026-01-01
+AS-1092,ns2.example.co.jp,203.0.113.46,public,active,情報システム部,権威 DNS,2026-08-18
+AS-1093,DC01.EXAMPLE.CO.JP,10.10.1.20,internal,active,情報システム部,ドメインコントローラー,2026-06-29
+AS-1097,dc02.example.co.jp,10.10.1.21,internal,active,情報システム部,ドメインコントローラー,2025-12-09
+AS-1101,fs01.example.co.jp.,10.10.1.22,internal,active,情報システム部,ファイルサーバー,2026-08-31
+AS-1103,erp.example.co.jp.,10.10.1.23,internal,active,情報システム部,基幹システム,2025-09-06
+AS-1107,hr-db.example.co.jp,10.10.1.24,internal,active,情報システム部,人事 DB,2025-09-23
+AS-1109,wiki.example.co.jp,10.10.1.25,internal,active,情報システム部,社内 Wiki,2026-03-16
+AS-1112,git.example.co.jp,10.10.1.26,internal,active,情報システム部,ソース管理,2026-06-11
+AS-1113,CI.EXAMPLE.CO.JP,10.10.1.27,internal,active,情報システム部,ビルドサーバー,2025-09-18
+AS-1117,backup01.example.co.jp,10.10.2.28,internal,active,情報システム部,バックアップ,2025-08-20
+AS-1121,print01.example.co.jp,10.10.2.29,internal,active,情報システム部,印刷サーバー,2025-08-22
+AS-1122,siem.example.co.jp,10.10.2.30,internal,active,情報システム部,ログ収集,2026-02-13
+AS-1124,vcenter.example.co.jp,10.10.2.31,internal,active,情報システム部,仮想基盤管理,2026-01-27
+AS-1128,fw-mgmt.example.co.jp,10.10.2.32,internal,active,情報システム部,境界ファイアウォールの管理画面,2026-02-19
+AS-1132,sw-core-mgmt.example.co.jp,10.10.2.33,internal,active,情報システム部,コアスイッチの管理画面,2025-10-15
+AS-1134,ipam.example.co.jp.,10.10.2.34,internal,active,情報システム部,IP アドレス管理,2026-05-29
+AS-1138,jump01.example.co.jp,10.10.2.35,internal,active,情報システム部,踏み台サーバー,2026-04-11
+AS-1141,monitor.example.co.jp,10.10.3.36,internal,active,情報システム部,監視サーバー,2026-03-17
+AS-1143,mdm.example.co.jp,10.10.3.37,internal,active,情報システム部,端末管理,2026-01-02
+AS-1145,license.example.co.jp,10.10.3.38,internal,active,情報システム部,ライセンスサーバー,2026-01-26
+AS-1146,crm.example.co.jp,10.10.3.39,internal,active,情報システム部,顧客管理,2026-04-12
+AS-1148,OLD-SHOP.EXAMPLE.CO.JP,,public,retired,人事部,旧オンラインストア（2025-03 廃止）,2025-10-25
+AS-1150,promo2024.example.co.jp,,public,retired,情報システム部,2024 年キャンペーン（2025-01 廃止）,2025-09-08
+AS-1153,ftp.example.co.jp,,public,retired,人事部,旧ファイル受け渡し（sftp に移行済み）,2026-08-09
+AS-1157,legacy-portal.example.co.jp.,,public,retired,営業企画部,旧取引先ポータル（2025-06 廃止）,2026-07-15
+AS-1300,example.co.jp,203.0.113.11,public,active,広報部,ドメイン頂点（www へ転送）,2026-08-04
+AS-1301,sample-shop.example,203.0.113.13,public,active,営業企画部,ブランドドメイン（shop へ転送）,2026-08-04
+AS-1302,www.sample-shop.example,,public,active,営業企画部,ブランドドメイン（shop の別名）,2026-08-04
+AS-1303,help.sample-shop.example,,public,active,カスタマーサポート部,ブランドドメイン（support の別名）,2026-08-04

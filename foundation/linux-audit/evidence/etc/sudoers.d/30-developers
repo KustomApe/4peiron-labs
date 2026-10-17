@@ -1,0 +1,2 @@
+# 開発者はログを読める（パスワードは必要）
+%developers	ALL=(root) /usr/bin/journalctl -u sample-app.service, /usr/bin/tail -f /var/log/sample-app/*

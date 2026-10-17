@@ -1,0 +1,2 @@
+# 運用チーム（夜間対応用）
+%ops	ALL=(ALL:ALL) NOPASSWD: ALL

@@ -1,0 +1,10 @@
+; sample-shop.example 公開ゾーン（2026-09-30 書き出し）。ブランド用ドメイン。
+$ORIGIN sample-shop.example.
+$TTL 3600
+@	IN	SOA	ns1.example.co.jp. hostmaster.example.co.jp. 2026080401 7200 900 1209600 3600
+@	IN	NS	ns1.example.co.jp.
+@	IN	NS	ns2.example.co.jp.
+@	IN	A	203.0.113.13
+www	IN	CNAME	shop.example.co.jp.
+help	IN	CNAME	support.example.co.jp.
+@	IN	TXT	"v=spf1 -all"

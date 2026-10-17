@@ -1,0 +1,2 @@
+# 監視エージェント用。ディスク容量の確認だけ
+svc_monitor	ALL=(root) NOPASSWD: /usr/lib/nagios/plugins/check_disk

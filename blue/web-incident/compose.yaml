@@ -1,0 +1,10 @@
+# web-incident: 証拠は /evidence に読み取り専用でつながる。ネットワークには出ない。
+services:
+  analyst:
+    build: ../../_base
+    image: 4peiron-labs/analyst:1
+    network_mode: none
+    read_only: true
+    tmpfs: [/tmp, /home/analyst]
+    volumes:
+      - ./evidence:/evidence:ro

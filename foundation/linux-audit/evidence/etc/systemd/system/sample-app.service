@@ -1,0 +1,20 @@
+[Unit]
+Description=Sample Corp. customer portal (gunicorn)
+After=network-online.target mysql.service
+Wants=network-online.target
+
+[Service]
+Type=notify
+User=deploy
+Group=www-data
+WorkingDirectory=/srv/app/current
+EnvironmentFile=/etc/sample-app/env
+ExecStart=/srv/app/venv/bin/gunicorn --workers 4 --bind unix:/run/sample-app/gunicorn.sock portal.wsgi
+ExecReload=/bin/kill -s HUP $MAINPID
+RuntimeDirectory=sample-app
+Restart=on-failure
+PrivateTmp=true
+NoNewPrivileges=true
+
+[Install]
+WantedBy=multi-user.target

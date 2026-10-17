@@ -1,0 +1,64 @@
+; example.co.jp 公開ゾーン（権威 DNS ns1 から 2026-09-30 に書き出し）
+$ORIGIN example.co.jp.
+$TTL 3600
+@	IN	SOA	ns1.example.co.jp. hostmaster.example.co.jp. (
+			2026093001 ; serial
+			7200       ; refresh
+			900        ; retry
+			1209600    ; expire
+			3600 )     ; minimum
+@	IN	NS	ns1.example.co.jp.
+@	IN	NS	ns2.example.co.jp.
+@	IN	A	203.0.113.11
+@	IN	MX	10 mail.example.co.jp.
+@	IN	TXT	"v=spf1 ip4:203.0.113.0/24 include:spf.mail-saas.example -all"
+_dmarc	IN	TXT	"v=DMARC1; p=quarantine; rua=mailto:dmarc@example.co.jp"
+selector1._domainkey	IN	TXT	"v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AExampleOnly"
+_sip._tls	IN	SRV	100 1 443 meet.example.co.jp.
+
+meet	IN	CNAME	sample.meeting-saas.example.
+smtp	IN	A	203.0.113.16
+img	IN	CNAME	cdn.example.co.jp.
+_acme-challenge.shop	IN	TXT	"Example-Only-acme-token-1"
+status	IN	CNAME	sample.statuspage.example.
+admin-guide	IN	A	203.0.113.33
+news	IN	A	203.0.113.24
+_acme-challenge.partner-vpn	IN	TXT	"Example-Only-acme-token-2"
+webmail	300	IN	A	203.0.113.40
+sftp	IN	A	203.0.113.31
+ftp	300	IN	TXT	"decommissioned 2025-04 see sftp"
+fw-mgmt	IN	A	203.0.113.200
+www	IN	A	203.0.113.11
+support	IN	A	203.0.113.20
+docs.example.co.jp.	IN	A	203.0.113.32
+partner-vpn.example.co.jp.	IN	A	203.0.113.19
+autodiscover	IN	CNAME	mail.example.co.jp.
+survey	IN	CNAME	forms.survey-service.example.
+ns2.example.co.jp.	IN	A	203.0.113.46
+faq	300	IN	CNAME	sample.helpdesk-saas.example.
+cdn	IN	A	203.0.113.25
+blog	IN	CNAME	sample-corp.blog-hosting.example.
+events	300	IN	CNAME	sample-events.cms-hosting.example.
+api.example.co.jp.	300	IN	A	203.0.113.14
+ir	IN	A	203.0.113.23
+stg-shop.example.co.jp.	IN	A	203.0.113.39
+vpn	300	IN	A	203.0.113.18
+ntp	IN	A	203.0.113.44
+shop	IN	A	203.0.113.13
+mail	300	IN	AAAA	2001:db8:10::f
+sso.example.co.jp.	300	IN	A	203.0.113.28
+careers	300	IN	CNAME	recruit.example.co.jp.
+campaign-2026	IN	CNAME	sample-lp-2026.pages-hosting.example.
+portal.example.co.jp.	IN	A	203.0.113.29
+support	IN	AAAA	2001:db8:10::14
+recruit.example.co.jp.	300	IN	A	203.0.113.12
+lp	IN	CNAME	lp-sample.cms-hosting.example.
+ns1	IN	A	203.0.113.45
+edi	IN	A	203.0.113.30
+stg-www	300	IN	A	203.0.113.38
+www	IN	TXT	"google-site-verification=Example-Only-9z8y7x"
+news	IN	AAAA	2001:db8:10::18
+login	300	IN	A	203.0.113.27
+download	IN	A	203.0.113.43
+download	300	IN	AAAA	2001:db8:10::2b
+mail	IN	A	203.0.113.15

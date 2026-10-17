@@ -1,0 +1,94 @@
+# portal.example.co.jp の応答ヘッダー（2026-10-07 10:20 JST、調査用の検証環境で curl -si により採取）
+# Cookie の値は調査用のダミーに置き換えてあります。
+
+### GET https://portal.example.co.jp/
+HTTP/1.1 200 OK
+Server: nginx
+Date: Wed, 07 Oct 2026 01:20:11 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 9184
+Connection: keep-alive
+Vary: Cookie, Accept-Language
+Content-Language: ja
+Set-Cookie: ui_lang=ja; Max-Age=31536000; Path=/; SameSite=Lax; Secure
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+Referrer-Policy: same-origin
+
+### GET https://portal.example.co.jp/login
+HTTP/1.1 200 OK
+Server: nginx
+Date: Wed, 07 Oct 2026 01:20:14 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 6021
+Connection: keep-alive
+Cache-Control: no-cache, no-store, must-revalidate, private
+Set-Cookie: csrftoken=EXAMPLE-ONLY-csrf-0000; expires=Wed, 06 Oct 2027 01:20:14 GMT; Max-Age=31449600; Path=/; SameSite=Lax; Secure
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+Referrer-Policy: same-origin
+
+### POST https://portal.example.co.jp/api/login  (ログイン成功時、「ログインしたままにする」にチェック)
+HTTP/1.1 200 OK
+Server: nginx
+Date: Wed, 07 Oct 2026 01:20:31 GMT
+Content-Type: application/json
+Content-Length: 87
+Connection: keep-alive
+Cache-Control: no-store
+Set-Cookie: sessionid=EXAMPLE-ONLY-session-0000; expires=Wed, 21 Oct 2026 01:20:31 GMT; HttpOnly; Max-Age=1209600; Path=/; SameSite=Lax; Secure
+Set-Cookie: csrftoken=EXAMPLE-ONLY-csrf-0001; expires=Wed, 06 Oct 2027 01:20:31 GMT; Max-Age=31449600; Path=/; SameSite=Lax; Secure
+Set-Cookie: remember_token=EXAMPLE-ONLY-remember-0000; expires=Fri, 06 Nov 2026 01:20:31 GMT; Max-Age=2592000; Path=/
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-Content-Type-Options: nosniff
+
+### POST https://portal.example.co.jp/api/login  (ログイン失敗時)
+HTTP/1.1 401 Unauthorized
+Server: nginx
+Date: Wed, 07 Oct 2026 01:20:40 GMT
+Content-Type: application/json
+Content-Length: 61
+Connection: keep-alive
+Cache-Control: no-store
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-Content-Type-Options: nosniff
+
+### GET https://portal.example.co.jp/dashboard
+HTTP/1.1 200 OK
+Server: nginx
+Date: Wed, 07 Oct 2026 01:20:33 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 14211
+Connection: keep-alive
+Cache-Control: private, no-cache
+Vary: Cookie
+Set-Cookie: sessionid=EXAMPLE-ONLY-session-0000; expires=Wed, 21 Oct 2026 01:20:33 GMT; HttpOnly; Max-Age=1209600; Path=/; SameSite=Lax; Secure
+Set-Cookie: dash_tab=billing; Path=/dashboard; SameSite=Strict; Secure; HttpOnly
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+
+### GET https://portal.example.co.jp/static/js/app.js?v=4f1c
+HTTP/1.1 200 OK
+Server: nginx
+Date: Wed, 07 Oct 2026 01:20:33 GMT
+Content-Type: application/javascript
+Content-Length: 88412
+Connection: keep-alive
+Last-Modified: Fri, 02 Oct 2026 06:30:12 GMT
+ETag: "66fce864-1595c"
+Cache-Control: public, max-age=2592000, immutable
+Accept-Ranges: bytes
+
+### GET https://portal.example.co.jp/logout
+HTTP/1.1 302 Found
+Server: nginx
+Date: Wed, 07 Oct 2026 01:21:02 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 0
+Connection: keep-alive
+Location: /
+Set-Cookie: sessionid=""; expires=Thu, 01 Jan 1970 00:00:00 GMT; Max-Age=0; Path=/; SameSite=Lax; Secure; HttpOnly
+Strict-Transport-Security: max-age=31536000; includeSubDomains
