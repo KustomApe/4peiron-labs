@@ -1,0 +1,35 @@
+# ラボが壊れたまま、または決まり（docs/rules.md）を破ったまま main に入らないようにする。
+# サイトのラボのページは main を clone する手順を案内しているので、main に入った時点で受講者に届く。
+name: check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  labs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 調査用のイメージをビルドする
+        run: docker build -t 4peiron-labs/analyst:1 _base
+
+      - name: 決まりを確かめる
+        run: python3 tools/check_labs.py
+
+      - name: 各ラボを起動して、証拠が読み取り専用で見えるかを確かめる
+        run: |
+          for compose in */*/compose.yaml; do
+            lab=$(dirname "$compose")
+            echo "::group::$lab"
+            docker compose -f "$compose" up -d --wait
+            docker compose -f "$compose" exec -T analyst bash -c \
+              'test -n "$(ls /evidence)" && ! touch /evidence/.w 2>/dev/null && touch ~/.w'
+            docker compose -f "$compose" down -v
+            echo "::endgroup::"
+          done

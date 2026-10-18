@@ -1,12 +1,17 @@
 # 4peiron-labs
 
-[4peiron.dev](https://4peiron.dev/security/) のセキュリティトラックで使う**調査型のラボ**です。
-どのラボも、架空の会社「株式会社サンプル」のログ・設定・ソースコードなどの証拠を読み、
-設問の答えを `4P{...}` の形のフラグとしてサイトに提出します。
+[4peiron.dev](https://4peiron.dev/security/) のセキュリティトラックで使うラボです。
+どのラボも、架空の会社「株式会社サンプル」を舞台に、設問の答えを `4P{...}` の形のフラグとして
+サイトに提出します。
 
-- 攻撃するサーバーはありません。コンテナは**ネットワークにつながらず**、証拠は読み取り専用です。
+- **どのラボも、あなたの PC の中だけで動きます。** ホストのポートは開けず、外のネットワークにもつながりません。
+- いまあるのは**調査型のラボ**です。ログ・設定などの証拠を読み取り専用で読みます。コンテナはネットワークにつながりません。
+- これから、練習用の標的を置くラボも足します。標的は同じ PC の中のコンテナだけで、外への経路の無いネットワークでつながります。**ラボで使った手順を、ほかの機器やサービスに向けてはいけません。**
 - 登場するドメイン・IP アドレス・会社・人物・認証情報はすべて架空です（`example.com`、文書用の IP アドレス帯）。
 - 使う前に、サイトの「法律と倫理」コースと、ラボ利用の同意を読んでください。
+
+ラボを作るときの決まりは [docs/rules.md](docs/rules.md) にあります。CI（`tools/check_labs.py`）が、
+どのラボもその決まりを守っているかを確かめます。
 
 ## 使い方
 
@@ -37,13 +42,15 @@ docker compose down -v
 
 ## English
 
-Investigation labs for the security track on [4peiron.dev](https://4peiron.dev/security/).
-Each lab hands you fictional evidence from Sample Corp. (logs, configuration, source code) and asks
-questions whose answers you submit on the site as `4P{...}` flags.
+Labs for the security track on [4peiron.dev](https://4peiron.dev/security/), set at the fictional
+Sample Corp. You submit the answers on the site as `4P{...}` flags.
 
-- There is nothing to attack. The container has **no network access** and the evidence is read-only.
+- **Every lab runs only inside your own PC.** No host ports are opened and nothing connects to outside networks.
+- The labs so far are **investigation labs**: you read logs and configuration as read-only evidence, and the container has no network access.
+- Labs with a practice target are coming. The target is only a container on the same PC, on a network with no route out. **Never point what you do in a lab at any other device or service.**
 - Every domain, IP address, company, person and credential is fictional.
 - Read the Law and Ethics course and the lab agreement on the site first.
+- The rules every lab follows are in [docs/rules.md](docs/rules.md) and are checked in CI.
 
 Run `docker compose up -d` in a lab directory, then `docker compose exec analyst bash`; the evidence
 is in `/evidence`. Clean up with `docker compose down -v`. Questions and hints are in each lab's `README.md`.
