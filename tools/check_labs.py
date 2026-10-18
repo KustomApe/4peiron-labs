@@ -96,6 +96,34 @@ def check_compose(lab: Path, config: dict) -> list[str]:
     return problems
 
 
+def is_target_lab(config: dict) -> bool:
+    """調査用のコンテナのほかに、ネットワークにつながるサービスがあるラボ。"""
+    return any(s.get("network_mode") != "none" for s in config.get("services", {}).values())
+
+
+def check_target_lab(lab: Path, config: dict) -> list[str]:
+    """標的を置くラボだけにかかる決まり（docs/rules.md の「標的を置くラボ」）。"""
+    problems = []
+    for name, svc in config.get("services", {}).items():
+        where = f"{name}:"
+        # 中身の分からない外のイメージをそのまま動かさない。土台は Dockerfile の FROM で使う
+        context = (svc.get("build") or {}).get("context")
+        if not context:
+            problems.append(f"{where} build が無い（このリポジトリの Dockerfile からビルドする）")
+        elif not Path(context).resolve().is_relative_to(ROOT):
+            problems.append(f"{where} build の場所がリポジトリの外（{context}）")
+        # 再起動の設定があると、PC を立ち上げ直したときに標的が勝手に動き出す
+        if svc.get("restart") not in (None, "no"):
+            problems.append(f"{where} restart: {svc['restart']} は使わない")
+    readme = lab / "README.md"
+    text = readme.read_text() if readme.is_file() else ""
+    if not re.search(r"^## 標的について", text, re.M):
+        problems.append("README.md に「## 標的について」の節が無い")
+    if not re.search(r"^### About the target", text, re.M):
+        problems.append("README.md に「### About the target」の節が無い")
+    return problems
+
+
 def check_files(lab: Path, config: dict) -> list[str]:
     problems = []
     readme = lab / "README.md"
@@ -106,8 +134,7 @@ def check_files(lab: Path, config: dict) -> list[str]:
         problems.append("README.md に日本語が無い")
     if not re.search(r"^## English", text, re.M):
         problems.append("README.md に「## English」の節が無い")
-    isolated = all(s.get("network_mode") == "none" for s in config.get("services", {}).values())
-    if isolated and not (lab / "evidence").is_dir():
+    if not is_target_lab(config) and not (lab / "evidence").is_dir():
         problems.append("evidence/ が無い")
     return problems
 
@@ -151,6 +178,8 @@ def main(args: list[str]) -> int:
             failed = True
             continue
         problems = check_compose(lab, config) + check_files(lab, config)
+        if is_target_lab(config):
+            problems += check_target_lab(lab, config)
         for p in problems:
             print(f"NG    {name}: {p}")
         for w in scan_evidence(lab):

@@ -39,6 +39,26 @@
 - README の最初に、このラボの標的は受講者の PC の中のコンテナだけで、**ラボで使った手順をほかの機器やサービスに向けてはいけない**ことを書く
 - 受講者に compose の設定を変えさせる手順（`ports:` を足す、`internal` を外す など）を書かない
 
+### 標的を置くラボだけにかかる確認（CI）
+
+| 決まり | CI |
+|---|---|
+| どのサービスも `build:` を持ち、その場所がこのリポジトリの中にある | ○ |
+| `restart:` を付けない（PC を立ち上げ直したときに標的が勝手に動き出さない） | ○ |
+| README に `## 標的について` と `### About the target` の節がある | ○ |
+
+### 標的を置くラボを足す流れ
+
+標的のアプリは人が書き、人が見てから入れます。
+
+1. **先に Issue で提案する**（ひな形「標的を置くラボの提案」）。シナリオ・学ぶこと・弱点（いくつ・どの種類か）・設問のあらましを書き、了承を得てから作り始める
+2. 標的のアプリを `<トラック>/<ラボ>/` の下に書く。README の `## 標的について` には、次の 3 つを書く
+   - 標的は、この PC の中のコンテナだけであること
+   - ラボで使った手順を、ほかの機器やサービスに向けてはいけないこと
+   - 片付け方（`docker compose down -v`）
+3. `python3 tools/check_labs.py <ラボのディレクトリ>` を通す
+4. PR を出す。レビューでは、弱点が提案のとおりで、それ以外の弱点が無いかも見る
+
 ## 新しいラボを足すとき
 
 1. 形（調査型か、標的を置くか）を決め、上の決まりに沿って `compose.yaml` を書く
@@ -65,3 +85,7 @@ Every lab here runs **only inside the learner's own PC and never connects to any
   weaknesses to what the questions need. Build target images from this repository. Use fictional data.
   The README must say up front that the only target is the container on your own PC, and never tell the
   learner to change the network settings.
+- **Target labs also need (checked in CI):** every service has a `build:` inside this repository, no
+  `restart:` policy, and the README has `## 標的について` and `### About the target` sections.
+- **Target applications are written and reviewed by people.** Propose the lab in an issue first
+  (scenario, what it teaches, which weaknesses, outline of the questions) and start once it is agreed.
