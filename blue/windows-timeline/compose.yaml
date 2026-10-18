@@ -5,6 +5,8 @@ services:
     image: 4peiron-labs/analyst:1
     network_mode: none
     read_only: true
-    tmpfs: [/tmp, /home/analyst]
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    tmpfs: [/tmp, "/home/analyst:uid=1000,gid=1000"]
     volumes:
       - ./evidence:/evidence:ro
