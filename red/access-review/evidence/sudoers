@@ -1,0 +1,18 @@
+# /etc/sudoers と /etc/sudoers.d/* をまとめたもの（コメントは元のまま）
+Defaults env_reset
+Defaults secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+
+root    ALL=(ALL:ALL) ALL
+%sudo   ALL=(ALL:ALL) ALL
+
+# 運用担当はアプリの再起動とログの閲覧だけ
+%ops    ALL=(root) /usr/bin/systemctl restart app.service, /usr/bin/journalctl -u app.service
+
+# DB 担当は postgres としての psql だけ
+%dbadmin ALL=(postgres) /usr/bin/psql
+
+# デプロイ用のサービスアカウント
+deploy  ALL=(app) NOPASSWD: /opt/app/bin/deploy
+
+# 開発者は app としてログを見るだけ
+mori    ALL=(app) /usr/bin/tail -f /var/log/app/app.log

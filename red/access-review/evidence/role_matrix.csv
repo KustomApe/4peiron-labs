@@ -1,0 +1,13 @@
+account,role,full_admin_allowed
+sato-admin,admin,yes
+ito-admin,admin,yes
+kimura,developer,no
+tanaka,developer,no
+mori,developer,no
+nakamura,operator,no
+ogawa,operator,no
+hayashi,dba,no
+deploy,service,no
+report,service,no
+app,service,no
+backup,service,no

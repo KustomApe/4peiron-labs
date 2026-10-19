@@ -1,0 +1,13 @@
+# ディストリビューションの標準で SUID / SGID が付くもの（同じ版の新規インストールから書き出し）
+/usr/bin/passwd
+/usr/bin/sudo
+/usr/bin/su
+/usr/bin/mount
+/usr/bin/umount
+/usr/bin/chsh
+/usr/bin/chfn
+/usr/bin/newgrp
+/usr/bin/gpasswd
+/usr/lib/openssh/ssh-keysign
+/usr/bin/crontab
+/usr/bin/expiry

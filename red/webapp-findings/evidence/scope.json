@@ -1,0 +1,35 @@
+{
+  "engagement": "SS-2026-WA-03",
+  "client": "株式会社サンプル",
+  "window": {
+    "start": "2026-10-14T00:00:00Z",
+    "end": "2026-10-16T09:00:00Z"
+  },
+  "in_scope": [
+    "stg.sample-shop.example",
+    "api.stg.sample-shop.example"
+  ],
+  "out_of_scope": [
+    {
+      "host": "pay.sample-shop.example",
+      "reason": "決済代行会社の環境。契約の外"
+    },
+    {
+      "host": "www.sample-shop.example",
+      "reason": "本番。今回は検証環境だけ"
+    }
+  ],
+  "accounts": [
+    {
+      "name": "tester-a",
+      "user_id": 1001,
+      "role": "customer"
+    },
+    {
+      "name": "tester-b",
+      "user_id": 1002,
+      "role": "customer"
+    }
+  ],
+  "notes": "検証環境のデータはすべて架空。tester-a と tester-b は診断用に発行された一般会員"
+}

@@ -1,0 +1,6 @@
+sudo:x:2000:sato-admin,ito-admin,kimura
+ops:x:2001:nakamura,ogawa,tanaka
+dbadmin:x:2002:hayashi
+developers:x:2003:kimura,tanaka,mori
+adm:x:2004:sato-admin,nakamura
+app:x:2005:app,deploy

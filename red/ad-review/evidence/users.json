@@ -1,0 +1,197 @@
+[
+ {
+  "samaccountname": "Administrator",
+  "enabled": true,
+  "serviceprincipalnames": [],
+  "dont_require_preauth": false,
+  "description": "組み込みの管理者"
+ },
+ {
+  "samaccountname": "adm-sato",
+  "enabled": true,
+  "serviceprincipalnames": [],
+  "dont_require_preauth": false,
+  "description": "ドメイン管理（佐藤）"
+ },
+ {
+  "samaccountname": "adm-ito",
+  "enabled": true,
+  "serviceprincipalnames": [],
+  "dont_require_preauth": false,
+  "description": "サーバー運用（伊藤）"
+ },
+ {
+  "samaccountname": "adm-old",
+  "enabled": false,
+  "serviceprincipalnames": [],
+  "dont_require_preauth": false,
+  "description": "退職者の管理用（2025 年に無効化）"
+ },
+ {
+  "samaccountname": "svc-bkup",
+  "enabled": true,
+  "serviceprincipalnames": [
+   "backupsvc/bk01.corp.example"
+  ],
+  "dont_require_preauth": false,
+  "description": "旧バックアップ"
+ },
+ {
+  "samaccountname": "svc-sql",
+  "enabled": true,
+  "serviceprincipalnames": [
+   "MSSQLSvc/db01.corp.example:1433"
+  ],
+  "dont_require_preauth": false,
+  "description": "SQL Server"
+ },
+ {
+  "samaccountname": "svc-web",
+  "enabled": true,
+  "serviceprincipalnames": [
+   "HTTP/intra.corp.example"
+  ],
+  "dont_require_preauth": false,
+  "description": "社内ポータル"
+ },
+ {
+  "samaccountname": "ext-yamada",
+  "enabled": true,
+  "serviceprincipalnames": [],
+  "dont_require_preauth": true,
+  "description": "委託先のアカウント（古い連携のため事前認証なし）"
+ },
+ {
+  "samaccountname": "old-test",
+  "enabled": false,
+  "serviceprincipalnames": [],
+  "dont_require_preauth": true,
+  "description": "昔の検証用"
+ },
+ {
+  "samaccountname": "helpdesk1",
+  "enabled": true,
+  "serviceprincipalnames": [],
+  "dont_require_preauth": false,
+  "description": "ヘルプデスク"
+ },
+ {
+  "samaccountname": "helpdesk2",
+  "enabled": true,
+  "serviceprincipalnames": [],
+  "dont_require_preauth": false,
+  "description": "ヘルプデスク"
+ },
+ {
+  "samaccountname": "suzuki",
+  "enabled": true,
+  "serviceprincipalnames": [],
+  "dont_require_preauth": false,
+  "description": ""
+ },
+ {
+  "samaccountname": "takahashi",
+  "enabled": true,
+  "serviceprincipalnames": [],
+  "dont_require_preauth": false,
+  "description": ""
+ },
+ {
+  "samaccountname": "watanabe",
+  "enabled": true,
+  "serviceprincipalnames": [],
+  "dont_require_preauth": false,
+  "description": ""
+ },
+ {
+  "samaccountname": "yamamoto",
+  "enabled": true,
+  "serviceprincipalnames": [],
+  "dont_require_preauth": false,
+  "description": ""
+ },
+ {
+  "samaccountname": "nakamura",
+  "enabled": true,
+  "serviceprincipalnames": [],
+  "dont_require_preauth": false,
+  "description": ""
+ },
+ {
+  "samaccountname": "kobayashi",
+  "enabled": true,
+  "serviceprincipalnames": [],
+  "dont_require_preauth": false,
+  "description": ""
+ },
+ {
+  "samaccountname": "kato",
+  "enabled": true,
+  "serviceprincipalnames": [],
+  "dont_require_preauth": false,
+  "description": ""
+ },
+ {
+  "samaccountname": "yoshida",
+  "enabled": true,
+  "serviceprincipalnames": [],
+  "dont_require_preauth": false,
+  "description": ""
+ },
+ {
+  "samaccountname": "yamada",
+  "enabled": true,
+  "serviceprincipalnames": [],
+  "dont_require_preauth": false,
+  "description": ""
+ },
+ {
+  "samaccountname": "sasaki",
+  "enabled": true,
+  "serviceprincipalnames": [],
+  "dont_require_preauth": false,
+  "description": ""
+ },
+ {
+  "samaccountname": "matsumoto",
+  "enabled": true,
+  "serviceprincipalnames": [],
+  "dont_require_preauth": false,
+  "description": ""
+ },
+ {
+  "samaccountname": "inoue",
+  "enabled": true,
+  "serviceprincipalnames": [],
+  "dont_require_preauth": false,
+  "description": ""
+ },
+ {
+  "samaccountname": "kimura",
+  "enabled": true,
+  "serviceprincipalnames": [],
+  "dont_require_preauth": false,
+  "description": ""
+ },
+ {
+  "samaccountname": "shimizu",
+  "enabled": true,
+  "serviceprincipalnames": [],
+  "dont_require_preauth": false,
+  "description": ""
+ },
+ {
+  "samaccountname": "hayashi",
+  "enabled": true,
+  "serviceprincipalnames": [],
+  "dont_require_preauth": false,
+  "description": ""
+ },
+ {
+  "samaccountname": "saito",
+  "enabled": true,
+  "serviceprincipalnames": [],
+  "dont_require_preauth": false,
+  "description": ""
+ }
+]
