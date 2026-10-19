@@ -1,0 +1,126 @@
+[
+  {
+    "id": "R201",
+    "name": "shell_spawned_by_web",
+    "technique": "T1059.004",
+    "conditions": [
+      {
+        "field": "event",
+        "op": "equals",
+        "value": "process"
+      },
+      {
+        "field": "parent",
+        "op": "in",
+        "value": [
+          "nginx",
+          "php-fpm8.3"
+        ]
+      },
+      {
+        "field": "image",
+        "op": "in",
+        "value": [
+          "/usr/bin/dash",
+          "/usr/bin/bash",
+          "/bin/sh"
+        ]
+      }
+    ],
+    "exceptions": []
+  },
+  {
+    "id": "R202",
+    "name": "download_to_tmp",
+    "technique": "T1105",
+    "conditions": [
+      {
+        "field": "event",
+        "op": "equals",
+        "value": "process"
+      },
+      {
+        "field": "image",
+        "op": "endswith",
+        "value": "/curl"
+      },
+      {
+        "field": "cmdline",
+        "op": "contains",
+        "value": " -o /tmp/"
+      }
+    ],
+    "exceptions": []
+  },
+  {
+    "id": "R203",
+    "name": "cron_file_written",
+    "technique": "T1053.003",
+    "conditions": [
+      {
+        "field": "event",
+        "op": "equals",
+        "value": "file"
+      },
+      {
+        "field": "path",
+        "op": "startswith",
+        "value": "/etc/cron"
+      }
+    ],
+    "exceptions": [
+      {
+        "field": "image",
+        "op": "equals",
+        "value": "/usr/bin/dpkg"
+      }
+    ]
+  },
+  {
+    "id": "R204",
+    "name": "local_user_created",
+    "technique": "T1136.001",
+    "conditions": [
+      {
+        "field": "event",
+        "op": "equals",
+        "value": "process"
+      },
+      {
+        "field": "image",
+        "op": "equals",
+        "value": "/usr/sbin/useradd"
+      }
+    ],
+    "exceptions": []
+  },
+  {
+    "id": "R205",
+    "name": "interactive_root_shell",
+    "technique": "T1548.003",
+    "conditions": [
+      {
+        "field": "event",
+        "op": "equals",
+        "value": "process"
+      },
+      {
+        "field": "image",
+        "op": "equals",
+        "value": "/usr/bin/sudo"
+      },
+      {
+        "field": "cmdline",
+        "op": "contains",
+        "value": "-i"
+      }
+    ],
+    "exceptions": [
+      {
+        "field": "user",
+        "op": "equals",
+        "value": "ansible"
+      }
+    ]
+  }
+]

@@ -1,0 +1,9 @@
+step,technique,name,host,expected_telemetry,expected_rule
+S01,T1505.003,アップロード先にスクリプトを置く / Place a script in the upload directory,lab-web01,web: POST /admin/upload.php + file create,R120 web_script_in_uploads
+S02,T1110.001,SSH のパスワード推測 / SSH password guessing,lab-lnx01,auth: Failed password,R101 ssh_bruteforce
+S03,T1078.003,推測したパスワードでログイン / Log in with the guessed password,lab-lnx01,auth: Accepted password,R102 ssh_login_after_failures
+S04,T1136.001,Windows のローカルアカウントの作成 / Create a Windows local account,lab-win01,security: 4720,R130 win_local_user_created
+S05,T1543.003,Windows のサービスの登録 / Register a Windows service,lab-win01,system: 7045,R131 win_new_service
+S06,T1136.001,Linux のローカルアカウントの作成 / Create a Linux local account,lab-lnx01,auditd: useradd,R110 linux_user_created
+S07,T1053.003,cron の設定ファイルを置く / Drop a cron file,lab-lnx01,auditd: write under /etc/cron.d,R111 cron_file_modified
+S08,T1070.001,イベントログの消去 / Clear an event log,lab-win01,security: 1102,R132 win_log_cleared

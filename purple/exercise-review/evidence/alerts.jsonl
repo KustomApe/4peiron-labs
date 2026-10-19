@@ -1,0 +1,8 @@
+{"ts": "2026-09-15T01:14:40Z", "rule_id": "R101", "rule": "ssh_bruteforce", "host": "lab-lnx01", "src_ip": "10.20.0.50", "user": "px-target", "count": 20}
+{"ts": "2026-09-15T01:16:40Z", "rule_id": "R101", "rule": "ssh_bruteforce", "host": "lab-lnx01", "src_ip": "10.20.0.50", "user": "px-target", "count": 20}
+{"ts": "2026-09-15T01:20:02Z", "rule_id": "R102", "rule": "ssh_login_after_failures", "host": "lab-lnx01", "src_ip": "10.20.0.50", "user": "px-target"}
+{"ts": "2026-09-15T01:26:55Z", "rule_id": "R120", "rule": "web_script_in_uploads", "host": "lab-web01", "user": "www-data", "path": "/var/www/html/uploads/px-s01.php", "msg": "create: px:S01"}
+{"ts": "2026-09-15T01:31:27Z", "rule_id": "R130", "rule": "win_local_user_created", "host": "lab-win01", "user": "pxuser04", "msg": "Account Name: pxuser04  Display Name: px:S04"}
+{"ts": "2026-09-15T01:47:41Z", "rule_id": "R110", "rule": "linux_user_created", "host": "lab-lnx01", "user": "root", "cmdline": "useradd -m -c px:S06 pxsvc06"}
+{"ts": "2026-09-15T02:00:30Z", "rule_id": "R140", "rule": "sudo_by_service_account", "host": "lab-lnx01", "user": "svc-backup", "cmdline": "/usr/local/bin/nightly-backup.sh"}
+{"ts": "2026-09-15T02:31:44Z", "rule_id": "R101", "rule": "ssh_bruteforce", "host": "lab-lnx01", "src_ip": "203.0.113.145", "user": "admin", "count": 20}

@@ -1,0 +1,6 @@
+step,technique,name
+W01,T1059.004,Web のプロセスからシェルを起動する / Spawn a shell from the web process
+W02,T1105,ツールを /tmp に取ってくる / Fetch a tool into /tmp
+W03,T1053.003,cron の設定ファイルを置く / Drop a cron file
+W04,T1136.001,ローカルアカウントを作る / Create a local account
+W05,T1548.003,sudo で root のシェルを開く / Open a root shell with sudo
