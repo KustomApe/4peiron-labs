@@ -1,0 +1,45 @@
+[
+  {
+    "id": "P1",
+    "rule": "R202",
+    "exception": {
+      "field": "user",
+      "op": "equals",
+      "value": "svc-deploy"
+    },
+    "reason": "svc-deploy が毎時リリースを /tmp に取ってくる定例の処理 / svc-deploy fetches the release into /tmp every hour"
+  },
+  {
+    "id": "P2",
+    "rule": "R205",
+    "exception": {
+      "field": "user",
+      "op": "in",
+      "value": [
+        "adm-sato",
+        "adm-kimura"
+      ]
+    },
+    "reason": "当番の管理者が保守で使う / on-call administrators use it for maintenance"
+  },
+  {
+    "id": "P3",
+    "rule": "R201",
+    "exception": {
+      "field": "cmdline",
+      "op": "startswith",
+      "value": "sh -c "
+    },
+    "reason": "アプリが画像の変換を sh -c 経由で呼ぶ / the app calls image conversion through sh -c"
+  },
+  {
+    "id": "P4",
+    "rule": "R201",
+    "exception": {
+      "field": "cmdline",
+      "op": "contains",
+      "value": "/usr/bin/convert "
+    },
+    "reason": "アプリの画像の変換（ImageMagick） / the app's image conversion (ImageMagick)"
+  }
+]

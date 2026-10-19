@@ -39,6 +39,7 @@ docker compose down -v
 | 基礎 | `foundation/linux-audit`, `foundation/network-logs`, `foundation/web-auth` |
 | ブルー | `blue/ssh-bruteforce`, `blue/web-incident`, `blue/windows-timeline` |
 | レッド | `red/surface-inventory` |
+| パープル | `purple/exercise-review`, `purple/detection-tuning` |
 
 ## English
 

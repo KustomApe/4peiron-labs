@@ -1,0 +1,12 @@
+# detection-tuning: 証拠は /evidence に読み取り専用でつながる。ネットワークには出ない。
+services:
+  analyst:
+    build: ../../_base
+    image: 4peiron-labs/analyst:1
+    network_mode: none
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    tmpfs: [/tmp, "/home/analyst:uid=1000,gid=1000"]
+    volumes:
+      - ./evidence:/evidence:ro
