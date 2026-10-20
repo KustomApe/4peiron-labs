@@ -1,0 +1,167 @@
+{"id": "e00014", "ts": "2026-10-14T00:00:13Z", "host": "lab-lnx01", "source": "auditd", "user": "root", "path": "/var/log/app/out.log", "cmdline": "writer"}
+{"id": "e00035", "ts": "2026-10-14T00:01:21Z", "host": "lab-lnx01", "source": "auditd", "user": "adm-tanaka", "path": "/home/adm-tanaka/.bash_history", "cmdline": "writer"}
+{"id": "e00127", "ts": "2026-10-14T00:06:25Z", "host": "lab-lnx01", "source": "auditd", "user": "root", "cmdline": "systemctl status nginx"}
+{"id": "e00011", "ts": "2026-10-14T00:10:46Z", "host": "lab-lnx01", "source": "auditd", "user": "svc-backup", "cmdline": "systemctl status nginx"}
+{"id": "e00006", "ts": "2026-10-14T00:26:10Z", "host": "lab-win01", "source": "auth", "user": "adm-sato", "msg": "pam_unix(cron:session): session opened for user adm-sato"}
+{"id": "e00079", "ts": "2026-10-14T00:35:57Z", "host": "lab-web01", "source": "auth", "user": "deploy", "msg": "pam_unix(cron:session): session opened for user deploy"}
+{"id": "e00015", "ts": "2026-10-14T00:38:01Z", "host": "lab-lnx01", "source": "auditd", "user": "adm-sato", "cmdline": "journalctl -u ssh"}
+{"id": "e00095", "ts": "2026-10-14T00:40:57Z", "host": "lab-web01", "source": "netflow", "user": "Administrator", "dest": "10.20.0.37:443"}
+{"id": "e00041", "ts": "2026-10-14T01:03:21Z", "host": "lab-win01", "source": "security", "user": "adm-tanaka", "path": "/var/www/app/tmp/cache.bin", "cmdline": "writer"}
+{"id": "e00097", "ts": "2026-10-14T01:10:43Z", "host": "lab-win01", "source": "security", "user": "adm-tanaka", "path": "/var/log/app/out.log", "cmdline": "writer"}
+{"id": "e00072", "ts": "2026-10-14T01:13:36Z", "host": "lab-win01", "source": "auth", "user": "svc-backup", "msg": "pam_unix(cron:session): session opened for user svc-backup"}
+{"id": "e00098", "ts": "2026-10-14T01:19:41Z", "host": "lab-web01", "source": "auth", "user": "svc-backup", "msg": "pam_unix(cron:session): session opened for user svc-backup"}
+{"id": "e00061", "ts": "2026-10-14T01:30:49Z", "host": "lab-lnx01", "source": "auditd", "user": "deploy", "path": "/home/deploy/.bash_history", "cmdline": "writer"}
+{"id": "e00132", "ts": "2026-10-14T01:44:25Z", "host": "lab-lnx01", "source": "auth", "user": "adm-tanaka", "msg": "pam_unix(cron:session): session opened for user adm-tanaka"}
+{"id": "e00073", "ts": "2026-10-14T01:45:17Z", "host": "lab-web01", "source": "auditd", "user": "root", "cmdline": "systemctl status nginx"}
+{"id": "e00054", "ts": "2026-10-14T01:56:39Z", "host": "lab-win01", "source": "security", "user": "root", "cmdline": "ls -la /var/log"}
+{"id": "e00141", "ts": "2026-10-14T02:01:00Z", "host": "lab-web01", "source": "web", "user": "-", "cmdline": "POST /admin/upload.php px-s01.php", "ua": "PurpleEx px:S01"}
+{"id": "e00142", "ts": "2026-10-14T02:01:01Z", "host": "lab-web01", "source": "auditd", "user": "www-data", "path": "/var/www/app/uploads/px-s01.php", "cmdline": "php-fpm # px:S01"}
+{"id": "e00143", "ts": "2026-10-14T02:08:00Z", "host": "lab-lnx01", "source": "auth", "user": "px-target", "msg": "Failed password for px-target from 10.20.0.50 port 50000 ssh2  # px:S02"}
+{"id": "e00144", "ts": "2026-10-14T02:08:03Z", "host": "lab-lnx01", "source": "auth", "user": "px-target", "msg": "Failed password for px-target from 10.20.0.50 port 50001 ssh2  # px:S02"}
+{"id": "e00145", "ts": "2026-10-14T02:08:06Z", "host": "lab-lnx01", "source": "auth", "user": "px-target", "msg": "Failed password for px-target from 10.20.0.50 port 50002 ssh2  # px:S02"}
+{"id": "e00146", "ts": "2026-10-14T02:08:09Z", "host": "lab-lnx01", "source": "auth", "user": "px-target", "msg": "Failed password for px-target from 10.20.0.50 port 50003 ssh2  # px:S02"}
+{"id": "e00147", "ts": "2026-10-14T02:08:12Z", "host": "lab-lnx01", "source": "auth", "user": "px-target", "msg": "Failed password for px-target from 10.20.0.50 port 50004 ssh2  # px:S02"}
+{"id": "e00148", "ts": "2026-10-14T02:08:15Z", "host": "lab-lnx01", "source": "auth", "user": "px-target", "msg": "Failed password for px-target from 10.20.0.50 port 50005 ssh2  # px:S02"}
+{"id": "e00149", "ts": "2026-10-14T02:08:18Z", "host": "lab-lnx01", "source": "auth", "user": "px-target", "msg": "Failed password for px-target from 10.20.0.50 port 50006 ssh2  # px:S02"}
+{"id": "e00150", "ts": "2026-10-14T02:08:21Z", "host": "lab-lnx01", "source": "auth", "user": "px-target", "msg": "Failed password for px-target from 10.20.0.50 port 50007 ssh2  # px:S02"}
+{"id": "e00151", "ts": "2026-10-14T02:08:24Z", "host": "lab-lnx01", "source": "auth", "user": "px-target", "msg": "Failed password for px-target from 10.20.0.50 port 50008 ssh2  # px:S02"}
+{"id": "e00152", "ts": "2026-10-14T02:08:27Z", "host": "lab-lnx01", "source": "auth", "user": "px-target", "msg": "Failed password for px-target from 10.20.0.50 port 50009 ssh2  # px:S02"}
+{"id": "e00153", "ts": "2026-10-14T02:08:30Z", "host": "lab-lnx01", "source": "auth", "user": "px-target", "msg": "Failed password for px-target from 10.20.0.50 port 50010 ssh2  # px:S02"}
+{"id": "e00154", "ts": "2026-10-14T02:08:33Z", "host": "lab-lnx01", "source": "auth", "user": "px-target", "msg": "Failed password for px-target from 10.20.0.50 port 50011 ssh2  # px:S02"}
+{"id": "e00069", "ts": "2026-10-14T02:09:09Z", "host": "lab-win01", "source": "auth", "user": "Administrator", "msg": "pam_unix(cron:session): session opened for user Administrator"}
+{"id": "e00155", "ts": "2026-10-14T02:17:02Z", "host": "lab-lnx01", "source": "auth", "user": "px-target", "msg": "Accepted password for px-target from 10.20.0.50 port 51999 ssh2  # px:S03"}
+{"id": "e00156", "ts": "2026-10-14T02:23:00Z", "host": "lab-win01", "source": "security", "user": "Administrator", "event_id": 4720, "target": "px-op", "cmdline": "net user px-op /add  # px:S04"}
+{"id": "e00112", "ts": "2026-10-14T02:27:13Z", "host": "lab-web01", "source": "auditd", "user": "adm-sato", "cmdline": "df -h"}
+{"id": "e00157", "ts": "2026-10-14T02:37:00Z", "host": "lab-win01", "source": "security", "user": "Administrator", "event_id": 7045, "service": "PxSvc", "cmdline": "sc create PxSvc  # px:S06"}
+{"id": "e00158", "ts": "2026-10-14T02:44:00Z", "host": "lab-lnx01", "source": "auditd", "user": "root", "path": "/etc/cron.d/px-task", "cmdline": "cp px-task /etc/cron.d/  # px:S07"}
+{"id": "e00159", "ts": "2026-10-14T02:50:00Z", "host": "lab-win01", "source": "security", "user": "Administrator", "event_id": 1102, "cmdline": "wevtutil cl Security  # px:S08"}
+{"id": "e00160", "ts": "2026-10-14T03:05:00Z", "host": "lab-lnx01", "source": "netflow", "user": "px-target", "dest": "10.20.0.10:445", "cmdline": "nmap sweep # px:S10"}
+{"id": "e00161", "ts": "2026-10-14T03:05:01Z", "host": "lab-lnx01", "source": "netflow", "user": "px-target", "dest": "10.20.0.11:445", "cmdline": "nmap sweep # px:S10"}
+{"id": "e00162", "ts": "2026-10-14T03:05:02Z", "host": "lab-lnx01", "source": "netflow", "user": "px-target", "dest": "10.20.0.12:445", "cmdline": "nmap sweep # px:S10"}
+{"id": "e00163", "ts": "2026-10-14T03:05:03Z", "host": "lab-lnx01", "source": "netflow", "user": "px-target", "dest": "10.20.0.13:445", "cmdline": "nmap sweep # px:S10"}
+{"id": "e00164", "ts": "2026-10-14T03:05:04Z", "host": "lab-lnx01", "source": "netflow", "user": "px-target", "dest": "10.20.0.14:445", "cmdline": "nmap sweep # px:S10"}
+{"id": "e00165", "ts": "2026-10-14T03:05:05Z", "host": "lab-lnx01", "source": "netflow", "user": "px-target", "dest": "10.20.0.15:445", "cmdline": "nmap sweep # px:S10"}
+{"id": "e00166", "ts": "2026-10-14T03:05:06Z", "host": "lab-lnx01", "source": "netflow", "user": "px-target", "dest": "10.20.0.16:445", "cmdline": "nmap sweep # px:S10"}
+{"id": "e00167", "ts": "2026-10-14T03:05:07Z", "host": "lab-lnx01", "source": "netflow", "user": "px-target", "dest": "10.20.0.17:445", "cmdline": "nmap sweep # px:S10"}
+{"id": "e00008", "ts": "2026-10-14T03:16:23Z", "host": "lab-lnx01", "source": "auth", "user": "adm-tanaka", "msg": "pam_unix(cron:session): session opened for user adm-tanaka"}
+{"id": "e00018", "ts": "2026-10-14T03:29:41Z", "host": "lab-win01", "source": "netflow", "user": "root", "dest": "10.20.0.16:443"}
+{"id": "e00013", "ts": "2026-10-14T03:33:51Z", "host": "lab-web01", "source": "auth", "user": "adm-sato", "msg": "pam_unix(cron:session): session opened for user adm-sato"}
+{"id": "e00135", "ts": "2026-10-14T03:54:22Z", "host": "lab-win01", "source": "security", "user": "svc-backup", "path": "/var/www/app/tmp/cache.bin", "cmdline": "writer"}
+{"id": "e00126", "ts": "2026-10-14T04:02:07Z", "host": "lab-win01", "source": "auth", "user": "deploy", "msg": "pam_unix(cron:session): session opened for user deploy"}
+{"id": "e00089", "ts": "2026-10-14T04:05:47Z", "host": "lab-web01", "source": "auth", "user": "Administrator", "msg": "pam_unix(cron:session): session opened for user Administrator"}
+{"id": "e00040", "ts": "2026-10-14T04:06:49Z", "host": "lab-win01", "source": "netflow", "user": "root", "dest": "10.20.0.35:443"}
+{"id": "e00099", "ts": "2026-10-14T04:07:17Z", "host": "lab-lnx01", "source": "auditd", "user": "root", "cmdline": "git pull"}
+{"id": "e00064", "ts": "2026-10-14T04:21:02Z", "host": "lab-win01", "source": "security", "user": "adm-tanaka", "cmdline": "df -h"}
+{"id": "e00113", "ts": "2026-10-14T04:21:08Z", "host": "lab-lnx01", "source": "auditd", "user": "deploy", "cmdline": "ls -la /var/log"}
+{"id": "e00105", "ts": "2026-10-14T04:22:36Z", "host": "lab-win01", "source": "netflow", "user": "root", "dest": "10.20.0.10:443"}
+{"id": "e00083", "ts": "2026-10-14T04:35:43Z", "host": "lab-lnx01", "source": "auth", "user": "deploy", "msg": "pam_unix(cron:session): session opened for user deploy"}
+{"id": "e00075", "ts": "2026-10-14T04:39:27Z", "host": "lab-web01", "source": "auditd", "user": "svc-backup", "cmdline": "ls -la /var/log"}
+{"id": "e00092", "ts": "2026-10-14T04:52:26Z", "host": "lab-win01", "source": "netflow", "user": "deploy", "dest": "10.20.0.29:443"}
+{"id": "e00125", "ts": "2026-10-14T05:08:54Z", "host": "lab-win01", "source": "security", "user": "deploy", "cmdline": "python3 deploy.py"}
+{"id": "e00078", "ts": "2026-10-14T05:16:51Z", "host": "lab-web01", "source": "auditd", "user": "adm-tanaka", "cmdline": "python3 deploy.py"}
+{"id": "e00048", "ts": "2026-10-14T06:02:03Z", "host": "lab-win01", "source": "security", "user": "deploy", "cmdline": "ls -la /var/log"}
+{"id": "e00063", "ts": "2026-10-14T06:02:33Z", "host": "lab-lnx01", "source": "netflow", "user": "adm-tanaka", "dest": "10.20.0.22:443"}
+{"id": "e00133", "ts": "2026-10-14T06:07:49Z", "host": "lab-web01", "source": "auditd", "user": "svc-backup", "path": "/var/log/app/out.log", "cmdline": "writer"}
+{"id": "e00071", "ts": "2026-10-14T06:14:00Z", "host": "lab-win01", "source": "security", "user": "deploy", "path": "/home/deploy/.bash_history", "cmdline": "writer"}
+{"id": "e00090", "ts": "2026-10-14T06:15:30Z", "host": "lab-lnx01", "source": "auditd", "user": "adm-tanaka", "cmdline": "git pull"}
+{"id": "e00118", "ts": "2026-10-14T06:46:58Z", "host": "lab-lnx01", "source": "netflow", "user": "adm-sato", "dest": "10.20.0.23:443"}
+{"id": "e00067", "ts": "2026-10-14T06:48:23Z", "host": "lab-win01", "source": "security", "user": "Administrator", "path": "/var/www/app/tmp/cache.bin", "cmdline": "writer"}
+{"id": "e00107", "ts": "2026-10-14T07:13:04Z", "host": "lab-lnx01", "source": "auth", "user": "svc-backup", "msg": "pam_unix(cron:session): session opened for user svc-backup"}
+{"id": "e00136", "ts": "2026-10-14T07:17:13Z", "host": "lab-web01", "source": "auditd", "user": "deploy", "cmdline": "tail -f app.log"}
+{"id": "e00010", "ts": "2026-10-14T07:25:24Z", "host": "lab-lnx01", "source": "netflow", "user": "svc-backup", "dest": "10.20.0.27:443"}
+{"id": "e00115", "ts": "2026-10-14T07:26:52Z", "host": "lab-lnx01", "source": "auth", "user": "deploy", "msg": "pam_unix(cron:session): session opened for user deploy"}
+{"id": "e00031", "ts": "2026-10-14T07:34:43Z", "host": "lab-web01", "source": "auditd", "user": "adm-sato", "cmdline": "df -h"}
+{"id": "e00117", "ts": "2026-10-14T07:45:50Z", "host": "lab-web01", "source": "auditd", "user": "Administrator", "cmdline": "systemctl status nginx"}
+{"id": "e00084", "ts": "2026-10-14T08:08:40Z", "host": "lab-lnx01", "source": "auditd", "user": "adm-sato", "cmdline": "systemctl status nginx"}
+{"id": "e00119", "ts": "2026-10-14T08:28:07Z", "host": "lab-lnx01", "source": "auditd", "user": "svc-backup", "path": "/home/svc-backup/.bash_history", "cmdline": "writer"}
+{"id": "e00101", "ts": "2026-10-14T08:31:42Z", "host": "lab-win01", "source": "security", "user": "deploy", "cmdline": "journalctl -u ssh"}
+{"id": "e00019", "ts": "2026-10-14T08:45:50Z", "host": "lab-lnx01", "source": "auditd", "user": "Administrator", "cmdline": "systemctl status nginx"}
+{"id": "e00038", "ts": "2026-10-14T08:50:48Z", "host": "lab-web01", "source": "auditd", "user": "svc-backup", "cmdline": "ls -la /var/log"}
+{"id": "e00102", "ts": "2026-10-14T09:03:36Z", "host": "lab-web01", "source": "auth", "user": "svc-backup", "msg": "pam_unix(cron:session): session opened for user svc-backup"}
+{"id": "e00052", "ts": "2026-10-14T09:07:14Z", "host": "lab-web01", "source": "auth", "user": "adm-tanaka", "msg": "pam_unix(cron:session): session opened for user adm-tanaka"}
+{"id": "e00122", "ts": "2026-10-14T09:14:44Z", "host": "lab-win01", "source": "netflow", "user": "adm-tanaka", "dest": "10.20.0.30:443"}
+{"id": "e00128", "ts": "2026-10-14T09:22:10Z", "host": "lab-lnx01", "source": "auth", "user": "adm-tanaka", "msg": "pam_unix(cron:session): session opened for user adm-tanaka"}
+{"id": "e00109", "ts": "2026-10-14T09:23:58Z", "host": "lab-lnx01", "source": "netflow", "user": "deploy", "dest": "10.20.0.36:443"}
+{"id": "e00094", "ts": "2026-10-14T09:33:53Z", "host": "lab-lnx01", "source": "auth", "user": "root", "msg": "pam_unix(cron:session): session opened for user root"}
+{"id": "e00004", "ts": "2026-10-14T09:35:51Z", "host": "lab-web01", "source": "auditd", "user": "root", "cmdline": "ls -la /var/log"}
+{"id": "e00074", "ts": "2026-10-14T09:47:18Z", "host": "lab-web01", "source": "auditd", "user": "adm-sato", "cmdline": "git pull"}
+{"id": "e00053", "ts": "2026-10-14T09:54:31Z", "host": "lab-lnx01", "source": "auditd", "user": "adm-tanaka", "cmdline": "python3 deploy.py"}
+{"id": "e00066", "ts": "2026-10-14T09:59:16Z", "host": "lab-web01", "source": "auditd", "user": "adm-sato", "cmdline": "git pull"}
+{"id": "e00007", "ts": "2026-10-14T10:04:59Z", "host": "lab-web01", "source": "auditd", "user": "adm-sato", "path": "/home/adm-sato/.bash_history", "cmdline": "writer"}
+{"id": "e00025", "ts": "2026-10-14T10:27:17Z", "host": "lab-lnx01", "source": "auditd", "user": "deploy", "path": "/home/deploy/.bash_history", "cmdline": "writer"}
+{"id": "e00062", "ts": "2026-10-14T10:37:47Z", "host": "lab-lnx01", "source": "netflow", "user": "adm-tanaka", "dest": "10.20.0.21:443"}
+{"id": "e00131", "ts": "2026-10-14T10:46:36Z", "host": "lab-web01", "source": "auditd", "user": "svc-backup", "path": "/var/log/app/out.log", "cmdline": "writer"}
+{"id": "e00047", "ts": "2026-10-14T10:56:58Z", "host": "lab-lnx01", "source": "auditd", "user": "Administrator", "cmdline": "tail -f app.log"}
+{"id": "e00036", "ts": "2026-10-14T10:58:38Z", "host": "lab-win01", "source": "auth", "user": "adm-tanaka", "msg": "pam_unix(cron:session): session opened for user adm-tanaka"}
+{"id": "e00077", "ts": "2026-10-14T11:09:05Z", "host": "lab-win01", "source": "netflow", "user": "adm-tanaka", "dest": "10.20.0.36:443"}
+{"id": "e00088", "ts": "2026-10-14T11:18:01Z", "host": "lab-lnx01", "source": "auditd", "user": "adm-tanaka", "path": "/var/www/app/tmp/cache.bin", "cmdline": "writer"}
+{"id": "e00044", "ts": "2026-10-14T11:43:14Z", "host": "lab-lnx01", "source": "auditd", "user": "Administrator", "path": "/var/www/app/tmp/cache.bin", "cmdline": "writer"}
+{"id": "e00129", "ts": "2026-10-14T11:46:26Z", "host": "lab-web01", "source": "auth", "user": "deploy", "msg": "pam_unix(cron:session): session opened for user deploy"}
+{"id": "e00082", "ts": "2026-10-14T11:48:00Z", "host": "lab-lnx01", "source": "auth", "user": "adm-sato", "msg": "pam_unix(cron:session): session opened for user adm-sato"}
+{"id": "e00104", "ts": "2026-10-14T11:56:52Z", "host": "lab-web01", "source": "auth", "user": "root", "msg": "pam_unix(cron:session): session opened for user root"}
+{"id": "e00059", "ts": "2026-10-14T12:02:43Z", "host": "lab-win01", "source": "security", "user": "svc-backup", "path": "/var/log/app/out.log", "cmdline": "writer"}
+{"id": "e00005", "ts": "2026-10-14T12:13:13Z", "host": "lab-lnx01", "source": "auditd", "user": "adm-sato", "path": "/var/www/app/tmp/cache.bin", "cmdline": "writer"}
+{"id": "e00043", "ts": "2026-10-14T12:32:09Z", "host": "lab-win01", "source": "security", "user": "root", "path": "/var/www/app/tmp/cache.bin", "cmdline": "writer"}
+{"id": "e00029", "ts": "2026-10-14T12:34:14Z", "host": "lab-web01", "source": "auditd", "user": "adm-sato", "cmdline": "git pull"}
+{"id": "e00056", "ts": "2026-10-14T12:42:52Z", "host": "lab-web01", "source": "auth", "user": "deploy", "msg": "pam_unix(cron:session): session opened for user deploy"}
+{"id": "e00032", "ts": "2026-10-14T12:49:57Z", "host": "lab-web01", "source": "auditd", "user": "svc-backup", "path": "/var/www/app/tmp/cache.bin", "cmdline": "writer"}
+{"id": "e00140", "ts": "2026-10-14T13:06:22Z", "host": "lab-web01", "source": "netflow", "user": "adm-tanaka", "dest": "10.20.0.26:443"}
+{"id": "e00009", "ts": "2026-10-14T13:11:49Z", "host": "lab-lnx01", "source": "auditd", "user": "svc-backup", "cmdline": "ls -la /var/log"}
+{"id": "e00026", "ts": "2026-10-14T13:28:39Z", "host": "lab-win01", "source": "security", "user": "adm-tanaka", "path": "/home/adm-tanaka/.bash_history", "cmdline": "writer"}
+{"id": "e00017", "ts": "2026-10-14T13:36:02Z", "host": "lab-web01", "source": "auditd", "user": "adm-sato", "cmdline": "journalctl -u ssh"}
+{"id": "e00081", "ts": "2026-10-14T13:40:42Z", "host": "lab-win01", "source": "security", "user": "svc-backup", "cmdline": "git pull"}
+{"id": "e00080", "ts": "2026-10-14T13:44:20Z", "host": "lab-lnx01", "source": "auditd", "user": "adm-sato", "path": "/var/log/app/out.log", "cmdline": "writer"}
+{"id": "e00110", "ts": "2026-10-14T14:02:49Z", "host": "lab-win01", "source": "security", "user": "adm-tanaka", "cmdline": "git pull"}
+{"id": "e00086", "ts": "2026-10-14T14:29:04Z", "host": "lab-web01", "source": "auditd", "user": "svc-backup", "cmdline": "python3 deploy.py"}
+{"id": "e00100", "ts": "2026-10-14T15:01:37Z", "host": "lab-lnx01", "source": "netflow", "user": "Administrator", "dest": "10.20.0.32:443"}
+{"id": "e00060", "ts": "2026-10-14T15:09:08Z", "host": "lab-win01", "source": "security", "user": "adm-sato", "cmdline": "journalctl -u ssh"}
+{"id": "e00033", "ts": "2026-10-14T15:49:10Z", "host": "lab-web01", "source": "auth", "user": "adm-sato", "msg": "pam_unix(cron:session): session opened for user adm-sato"}
+{"id": "e00046", "ts": "2026-10-14T15:54:14Z", "host": "lab-web01", "source": "auditd", "user": "root", "cmdline": "git pull"}
+{"id": "e00049", "ts": "2026-10-14T16:02:57Z", "host": "lab-win01", "source": "auth", "user": "deploy", "msg": "pam_unix(cron:session): session opened for user deploy"}
+{"id": "e00001", "ts": "2026-10-14T16:07:31Z", "host": "lab-web01", "source": "auditd", "user": "svc-backup", "cmdline": "ls -la /var/log"}
+{"id": "e00070", "ts": "2026-10-14T16:08:08Z", "host": "lab-web01", "source": "auth", "user": "svc-backup", "msg": "pam_unix(cron:session): session opened for user svc-backup"}
+{"id": "e00120", "ts": "2026-10-14T16:13:40Z", "host": "lab-win01", "source": "security", "user": "adm-sato", "cmdline": "df -h"}
+{"id": "e00002", "ts": "2026-10-14T16:17:09Z", "host": "lab-win01", "source": "netflow", "user": "svc-backup", "dest": "10.20.0.35:443"}
+{"id": "e00037", "ts": "2026-10-14T16:17:43Z", "host": "lab-win01", "source": "auth", "user": "adm-sato", "msg": "pam_unix(cron:session): session opened for user adm-sato"}
+{"id": "e00085", "ts": "2026-10-14T16:21:53Z", "host": "lab-lnx01", "source": "auditd", "user": "Administrator", "path": "/var/log/app/out.log", "cmdline": "writer"}
+{"id": "e00121", "ts": "2026-10-14T16:24:37Z", "host": "lab-lnx01", "source": "auditd", "user": "svc-backup", "path": "/home/svc-backup/.bash_history", "cmdline": "writer"}
+{"id": "e00022", "ts": "2026-10-14T16:33:20Z", "host": "lab-win01", "source": "security", "user": "root", "path": "/home/root/.bash_history", "cmdline": "writer"}
+{"id": "e00024", "ts": "2026-10-14T16:44:37Z", "host": "lab-web01", "source": "auditd", "user": "svc-backup", "cmdline": "df -h"}
+{"id": "e00114", "ts": "2026-10-14T17:51:07Z", "host": "lab-lnx01", "source": "netflow", "user": "deploy", "dest": "10.20.0.24:443"}
+{"id": "e00137", "ts": "2026-10-14T17:55:16Z", "host": "lab-lnx01", "source": "auditd", "user": "deploy", "cmdline": "tail -f app.log"}
+{"id": "e00027", "ts": "2026-10-14T17:58:20Z", "host": "lab-web01", "source": "auditd", "user": "deploy", "path": "/home/deploy/.bash_history", "cmdline": "writer"}
+{"id": "e00057", "ts": "2026-10-14T18:09:49Z", "host": "lab-lnx01", "source": "auditd", "user": "Administrator", "cmdline": "git pull"}
+{"id": "e00051", "ts": "2026-10-14T18:28:20Z", "host": "lab-win01", "source": "security", "user": "deploy", "cmdline": "python3 deploy.py"}
+{"id": "e00087", "ts": "2026-10-14T18:54:24Z", "host": "lab-web01", "source": "auditd", "user": "svc-backup", "cmdline": "ls -la /var/log"}
+{"id": "e00103", "ts": "2026-10-14T19:00:04Z", "host": "lab-win01", "source": "netflow", "user": "Administrator", "dest": "10.20.0.32:443"}
+{"id": "e00124", "ts": "2026-10-14T19:02:37Z", "host": "lab-win01", "source": "netflow", "user": "adm-sato", "dest": "10.20.0.11:443"}
+{"id": "e00020", "ts": "2026-10-14T19:20:42Z", "host": "lab-web01", "source": "auditd", "user": "root", "cmdline": "df -h"}
+{"id": "e00116", "ts": "2026-10-14T19:25:45Z", "host": "lab-win01", "source": "security", "user": "deploy", "cmdline": "df -h"}
+{"id": "e00111", "ts": "2026-10-14T19:29:45Z", "host": "lab-web01", "source": "netflow", "user": "svc-backup", "dest": "10.20.0.26:443"}
+{"id": "e00130", "ts": "2026-10-14T19:32:02Z", "host": "lab-win01", "source": "security", "user": "Administrator", "cmdline": "git pull"}
+{"id": "e00012", "ts": "2026-10-14T19:38:41Z", "host": "lab-win01", "source": "security", "user": "Administrator", "path": "/var/log/app/out.log", "cmdline": "writer"}
+{"id": "e00065", "ts": "2026-10-14T19:38:46Z", "host": "lab-lnx01", "source": "auditd", "user": "adm-tanaka", "cmdline": "journalctl -u ssh"}
+{"id": "e00123", "ts": "2026-10-14T19:54:34Z", "host": "lab-lnx01", "source": "auth", "user": "root", "msg": "pam_unix(cron:session): session opened for user root"}
+{"id": "e00034", "ts": "2026-10-14T20:06:30Z", "host": "lab-lnx01", "source": "netflow", "user": "deploy", "dest": "10.20.0.11:443"}
+{"id": "e00016", "ts": "2026-10-14T20:10:29Z", "host": "lab-web01", "source": "auditd", "user": "Administrator", "cmdline": "df -h"}
+{"id": "e00138", "ts": "2026-10-14T20:17:45Z", "host": "lab-web01", "source": "auditd", "user": "adm-tanaka", "cmdline": "ls -la /var/log"}
+{"id": "e00091", "ts": "2026-10-14T20:27:08Z", "host": "lab-lnx01", "source": "auditd", "user": "deploy", "path": "/var/www/app/tmp/cache.bin", "cmdline": "writer"}
+{"id": "e00068", "ts": "2026-10-14T21:09:33Z", "host": "lab-web01", "source": "netflow", "user": "adm-sato", "dest": "10.20.0.37:443"}
+{"id": "e00030", "ts": "2026-10-14T21:12:20Z", "host": "lab-win01", "source": "security", "user": "Administrator", "cmdline": "df -h"}
+{"id": "e00093", "ts": "2026-10-14T21:19:35Z", "host": "lab-lnx01", "source": "auditd", "user": "adm-tanaka", "path": "/var/www/app/tmp/cache.bin", "cmdline": "writer"}
+{"id": "e00055", "ts": "2026-10-14T21:24:01Z", "host": "lab-lnx01", "source": "auth", "user": "root", "msg": "pam_unix(cron:session): session opened for user root"}
+{"id": "e00058", "ts": "2026-10-14T21:33:03Z", "host": "lab-lnx01", "source": "auditd", "user": "root", "cmdline": "journalctl -u ssh"}
+{"id": "e00042", "ts": "2026-10-14T21:37:06Z", "host": "lab-win01", "source": "security", "user": "Administrator", "cmdline": "tail -f app.log"}
+{"id": "e00021", "ts": "2026-10-14T21:57:55Z", "host": "lab-lnx01", "source": "auditd", "user": "adm-tanaka", "cmdline": "ls -la /var/log"}
+{"id": "e00134", "ts": "2026-10-14T22:05:33Z", "host": "lab-lnx01", "source": "auditd", "user": "deploy", "cmdline": "ls -la /var/log"}
+{"id": "e00028", "ts": "2026-10-14T22:15:49Z", "host": "lab-lnx01", "source": "auditd", "user": "deploy", "path": "/home/deploy/.bash_history", "cmdline": "writer"}
+{"id": "e00023", "ts": "2026-10-14T22:17:23Z", "host": "lab-web01", "source": "auditd", "user": "Administrator", "cmdline": "git pull"}
+{"id": "e00096", "ts": "2026-10-14T22:19:32Z", "host": "lab-web01", "source": "auditd", "user": "Administrator", "cmdline": "ls -la /var/log"}
+{"id": "e00045", "ts": "2026-10-14T22:39:17Z", "host": "lab-web01", "source": "auditd", "user": "adm-sato", "cmdline": "journalctl -u ssh"}
+{"id": "e00039", "ts": "2026-10-14T22:45:33Z", "host": "lab-win01", "source": "security", "user": "root", "cmdline": "systemctl status nginx"}
+{"id": "e00003", "ts": "2026-10-14T22:45:38Z", "host": "lab-win01", "source": "security", "user": "Administrator", "path": "/home/Administrator/.bash_history", "cmdline": "writer"}
+{"id": "e00076", "ts": "2026-10-14T22:49:16Z", "host": "lab-web01", "source": "netflow", "user": "deploy", "dest": "10.20.0.14:443"}
+{"id": "e00139", "ts": "2026-10-14T23:05:20Z", "host": "lab-win01", "source": "auth", "user": "root", "msg": "pam_unix(cron:session): session opened for user root"}
+{"id": "e00050", "ts": "2026-10-14T23:07:48Z", "host": "lab-win01", "source": "security", "user": "adm-tanaka", "cmdline": "tail -f app.log"}
+{"id": "e00108", "ts": "2026-10-14T23:44:22Z", "host": "lab-lnx01", "source": "auditd", "user": "adm-tanaka", "path": "/var/log/app/out.log", "cmdline": "writer"}
+{"id": "e00106", "ts": "2026-10-14T23:45:55Z", "host": "lab-web01", "source": "auditd", "user": "deploy", "cmdline": "python3 deploy.py"}

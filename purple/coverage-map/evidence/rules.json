@@ -1,0 +1,78 @@
+[
+  {
+    "id": "R101",
+    "name": "ssh_bruteforce",
+    "techniques": [
+      "T1110.001"
+    ],
+    "hosts": [
+      "lab-lnx01",
+      "lab-web01"
+    ]
+  },
+  {
+    "id": "R102",
+    "name": "ssh_login_after_failures",
+    "techniques": [
+      "T1078.003"
+    ],
+    "hosts": [
+      "lab-lnx01",
+      "lab-web01"
+    ]
+  },
+  {
+    "id": "R120",
+    "name": "web_script_in_uploads",
+    "techniques": [
+      "T1505.003"
+    ],
+    "hosts": [
+      "lab-web01"
+    ]
+  },
+  {
+    "id": "R130",
+    "name": "win_local_user_created",
+    "techniques": [
+      "T1136.001"
+    ],
+    "hosts": [
+      "lab-win01"
+    ]
+  },
+  {
+    "id": "R131",
+    "name": "win_new_service",
+    "techniques": [
+      "T1543.003"
+    ],
+    "hosts": [
+      "lab-win01"
+    ]
+  },
+  {
+    "id": "R132",
+    "name": "win_log_cleared",
+    "techniques": [
+      "T1070.001"
+    ],
+    "hosts": [
+      "lab-win01"
+    ]
+  },
+  {
+    "id": "R140",
+    "name": "suspicious_cmdline",
+    "techniques": [
+      "T1059",
+      "T1046",
+      "T1110.001"
+    ],
+    "hosts": [
+      "lab-lnx01",
+      "lab-web01",
+      "lab-win01"
+    ]
+  }
+]

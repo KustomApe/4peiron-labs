@@ -1,0 +1,27 @@
+[
+  {
+    "id": "R101",
+    "name": "ssh_bruteforce",
+    "technique": "T1110.001"
+  },
+  {
+    "id": "R102",
+    "name": "ssh_login_after_failures",
+    "technique": "T1078.003"
+  },
+  {
+    "id": "R140",
+    "name": "suspicious_cmdline",
+    "technique": "T1059"
+  },
+  {
+    "id": "R150",
+    "name": "port_scan",
+    "technique": "T1046"
+  },
+  {
+    "id": "R160",
+    "name": "new_admin_group_member",
+    "technique": "T1098"
+  }
+]
