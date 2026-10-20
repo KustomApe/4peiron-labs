@@ -1,0 +1,39 @@
+{"ts": "2026-10-16T01:00:00Z", "rule_id": "R101", "rule": "ssh_bruteforce", "host": "lab-lnx01", "src_ip": "10.20.0.9", "marker": "", "user": "root", "count": 20}
+{"ts": "2026-10-16T01:01:00Z", "rule_id": "R101", "rule": "ssh_bruteforce", "host": "lab-web01", "src_ip": "10.20.0.9", "marker": "", "user": "root", "count": 20}
+{"ts": "2026-10-16T01:02:00Z", "rule_id": "R101", "rule": "ssh_bruteforce", "host": "lab-web01", "src_ip": "10.20.0.9", "marker": "", "user": "root", "count": 20}
+{"ts": "2026-10-16T01:03:00Z", "rule_id": "R101", "rule": "ssh_bruteforce", "host": "lab-web01", "src_ip": "10.20.0.9", "marker": "", "user": "root", "count": 20}
+{"ts": "2026-10-16T01:04:00Z", "rule_id": "R101", "rule": "ssh_bruteforce", "host": "lab-lnx01", "src_ip": "10.20.0.9", "marker": "", "user": "root", "count": 20}
+{"ts": "2026-10-16T01:05:00Z", "rule_id": "R101", "rule": "ssh_bruteforce", "host": "lab-lnx01", "src_ip": "10.20.0.9", "marker": "", "user": "root", "count": 20}
+{"ts": "2026-10-16T01:06:00Z", "rule_id": "R101", "rule": "ssh_bruteforce", "host": "lab-lnx01", "src_ip": "10.20.0.9", "marker": "", "user": "root", "count": 20}
+{"ts": "2026-10-16T01:07:00Z", "rule_id": "R101", "rule": "ssh_bruteforce", "host": "lab-web01", "src_ip": "10.20.0.9", "marker": "", "user": "root", "count": 20}
+{"ts": "2026-10-16T01:08:00Z", "rule_id": "R101", "rule": "ssh_bruteforce", "host": "lab-lnx01", "src_ip": "10.20.0.9", "marker": "", "user": "root", "count": 20}
+{"ts": "2026-10-16T01:09:00Z", "rule_id": "R101", "rule": "ssh_bruteforce", "host": "lab-lnx01", "src_ip": "10.20.0.9", "marker": "", "user": "root", "count": 20}
+{"ts": "2026-10-16T01:10:00Z", "rule_id": "R101", "rule": "ssh_bruteforce", "host": "lab-lnx01", "src_ip": "10.20.0.9", "marker": "", "user": "root", "count": 20}
+{"ts": "2026-10-16T01:11:00Z", "rule_id": "R101", "rule": "ssh_bruteforce", "host": "lab-lnx01", "src_ip": "10.20.0.9", "marker": "", "user": "root", "count": 20}
+{"ts": "2026-10-16T01:12:00Z", "rule_id": "R101", "rule": "ssh_bruteforce", "host": "lab-web01", "src_ip": "10.20.0.9", "marker": "", "user": "root", "count": 20}
+{"ts": "2026-10-16T01:13:00Z", "rule_id": "R101", "rule": "ssh_bruteforce", "host": "lab-web01", "src_ip": "10.20.0.9", "marker": "", "user": "root", "count": 20}
+{"ts": "2026-10-16T01:14:00Z", "rule_id": "R101", "rule": "ssh_bruteforce", "host": "lab-web01", "src_ip": "10.20.0.9", "marker": "", "user": "root", "count": 20}
+{"ts": "2026-10-16T01:30:00Z", "rule_id": "R150", "rule": "port_scan", "host": "lab-win01", "src_ip": "10.20.0.9", "marker": "", "ports": 378}
+{"ts": "2026-10-16T01:31:00Z", "rule_id": "R150", "rule": "port_scan", "host": "lab-win01", "src_ip": "10.20.0.9", "marker": "", "ports": 234}
+{"ts": "2026-10-16T01:32:00Z", "rule_id": "R150", "rule": "port_scan", "host": "lab-win01", "src_ip": "10.20.0.9", "marker": "", "ports": 251}
+{"ts": "2026-10-16T01:33:00Z", "rule_id": "R150", "rule": "port_scan", "host": "lab-web01", "src_ip": "10.20.0.9", "marker": "", "ports": 111}
+{"ts": "2026-10-16T01:34:00Z", "rule_id": "R150", "rule": "port_scan", "host": "lab-web01", "src_ip": "10.20.0.9", "marker": "", "ports": 375}
+{"ts": "2026-10-16T01:35:00Z", "rule_id": "R150", "rule": "port_scan", "host": "lab-web01", "src_ip": "10.20.0.9", "marker": "", "ports": 227}
+{"ts": "2026-10-16T01:36:00Z", "rule_id": "R150", "rule": "port_scan", "host": "lab-lnx01", "src_ip": "10.20.0.9", "marker": "", "ports": 306}
+{"ts": "2026-10-16T01:37:00Z", "rule_id": "R150", "rule": "port_scan", "host": "lab-win01", "src_ip": "10.20.0.9", "marker": "", "ports": 168}
+{"ts": "2026-10-16T01:38:00Z", "rule_id": "R150", "rule": "port_scan", "host": "lab-win01", "src_ip": "10.20.0.9", "marker": "", "ports": 64}
+{"ts": "2026-10-16T01:39:00Z", "rule_id": "R150", "rule": "port_scan", "host": "lab-web01", "src_ip": "10.20.0.9", "marker": "", "ports": 164}
+{"ts": "2026-10-16T02:02:00Z", "rule_id": "R101", "rule": "ssh_bruteforce", "host": "lab-lnx01", "src_ip": "10.20.0.50", "marker": "px:E01", "user": "px-target", "count": 20}
+{"ts": "2026-10-16T02:03:00Z", "rule_id": "R101", "rule": "ssh_bruteforce", "host": "lab-lnx01", "src_ip": "10.20.0.50", "marker": "px:E01", "user": "px-target", "count": 20}
+{"ts": "2026-10-16T02:10:30Z", "rule_id": "R102", "rule": "ssh_login_after_failures", "host": "lab-lnx01", "src_ip": "10.20.0.50", "marker": "px:E02", "user": "px-target"}
+{"ts": "2026-10-16T02:20:20Z", "rule_id": "R140", "rule": "suspicious_cmdline", "host": "lab-web01", "src_ip": "10.20.0.50", "marker": "px:E03", "user": "www-data"}
+{"ts": "2026-10-16T02:20:25Z", "rule_id": "R140", "rule": "suspicious_cmdline", "host": "lab-web01", "src_ip": "10.20.0.50", "marker": "px:E03", "user": "www-data"}
+{"ts": "2026-10-16T02:30:40Z", "rule_id": "R160", "rule": "new_admin_group_member", "host": "lab-win01", "src_ip": "10.20.0.50", "marker": "px:E04", "user": "Administrator", "target": "px-op"}
+{"ts": "2026-10-16T02:40:22Z", "rule_id": "R140", "rule": "suspicious_cmdline", "host": "lab-lnx01", "src_ip": "10.20.0.50", "marker": "px:E05", "user": "px-target"}
+{"ts": "2026-10-16T02:40:35Z", "rule_id": "R140", "rule": "suspicious_cmdline", "host": "lab-lnx01", "src_ip": "10.20.0.50", "marker": "px:E05", "user": "px-target"}
+{"ts": "2026-10-16T05:00:00Z", "rule_id": "R140", "rule": "suspicious_cmdline", "host": "lab-lnx01", "src_ip": "10.20.0.11", "marker": "", "user": "svc-monitor", "cmdline": "sh -c 'df -h; free -m'"}
+{"ts": "2026-10-16T05:07:00Z", "rule_id": "R140", "rule": "suspicious_cmdline", "host": "lab-lnx01", "src_ip": "10.20.0.11", "marker": "", "user": "svc-monitor", "cmdline": "sh -c 'df -h; free -m'"}
+{"ts": "2026-10-16T05:14:00Z", "rule_id": "R140", "rule": "suspicious_cmdline", "host": "lab-lnx01", "src_ip": "10.20.0.11", "marker": "", "user": "svc-monitor", "cmdline": "sh -c 'df -h; free -m'"}
+{"ts": "2026-10-16T05:21:00Z", "rule_id": "R140", "rule": "suspicious_cmdline", "host": "lab-lnx01", "src_ip": "10.20.0.11", "marker": "", "user": "svc-monitor", "cmdline": "sh -c 'df -h; free -m'"}
+{"ts": "2026-10-16T06:00:00Z", "rule_id": "R102", "rule": "ssh_login_after_failures", "host": "lab-web01", "src_ip": "198.51.100.23", "marker": "", "user": "guest"}
+{"ts": "2026-10-16T06:01:00Z", "rule_id": "R102", "rule": "ssh_login_after_failures", "host": "lab-web01", "src_ip": "198.51.100.23", "marker": "", "user": "guest"}

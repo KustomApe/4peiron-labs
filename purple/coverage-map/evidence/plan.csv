@@ -1,0 +1,11 @@
+step,technique,name,host,expected_telemetry
+S01,T1505.003,アップロードディレクトリに Web シェルを置く / Drop a web shell in the upload dir,lab-web01,web: POST /admin/upload.php + file create
+S02,T1110.001,SSH のパスワード推測 / SSH password guessing,lab-lnx01,auth: Failed password * N
+S03,T1078.003,推測したパスワードでログイン / Log in with the guessed password,lab-lnx01,auth: Accepted password
+S04,T1136.001,Windows のローカルアカウント作成 / Create a Windows local account,lab-win01,security: 4720
+S05,T1136.001,Linux のローカルアカウント作成 / Create a Linux local account,lab-lnx01,(エージェント未導入でテレメトリ無し)
+S06,T1543.003,Windows のサービス登録 / Register a Windows service,lab-win01,system: 7045
+S07,T1053.003,/etc/cron.d に cron ファイルを置く / Drop a cron file under /etc/cron.d,lab-lnx01,auditd: write /etc/cron.d/*
+S08,T1070.001,Windows イベントログの消去 / Clear a Windows event log,lab-win01,security: 1102
+S09,T1059.001,PowerShell のダウンロード実行 / PowerShell download-cradle,lab-win01,(実行せず)
+S10,T1046,内部ネットワークのスキャン / Internal network scan,lab-lnx01,netflow: fan-out

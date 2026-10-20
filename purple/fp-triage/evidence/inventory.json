@@ -1,0 +1,28 @@
+{
+  "sources": [
+    {
+      "ip": "10.20.0.9",
+      "role": "vuln-scanner",
+      "owner": "sec-team",
+      "note": "週次の脆弱性スキャン（SSH/ポート）"
+    },
+    {
+      "ip": "10.20.0.11",
+      "role": "monitoring",
+      "owner": "sre",
+      "note": "Zabbix の死活監視。agent 経由でコマンドを実行"
+    },
+    {
+      "ip": "10.20.0.20",
+      "role": "ci-runner",
+      "owner": "platform",
+      "note": "デプロイ。アラート実績なし"
+    }
+  ],
+  "service_accounts": [
+    {
+      "name": "svc-backup",
+      "note": "夜間バックアップ"
+    }
+  ]
+}
