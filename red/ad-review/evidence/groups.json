@@ -1,0 +1,103 @@
+[
+ {
+  "name": "Domain Admins",
+  "members": [
+   "Administrator",
+   "adm-sato",
+   "group:T0-Operators"
+  ]
+ },
+ {
+  "name": "Enterprise Admins",
+  "members": [
+   "Administrator"
+  ]
+ },
+ {
+  "name": "Schema Admins",
+  "members": [
+   "Administrator"
+  ]
+ },
+ {
+  "name": "Administrators",
+  "members": [
+   "Administrator",
+   "group:Domain Admins",
+   "group:Enterprise Admins"
+  ]
+ },
+ {
+  "name": "T0-Operators",
+  "members": [
+   "adm-ito",
+   "group:Legacy-Backup"
+  ]
+ },
+ {
+  "name": "Legacy-Backup",
+  "members": [
+   "svc-bkup",
+   "adm-old"
+  ]
+ },
+ {
+  "name": "Server-Admins",
+  "members": [
+   "adm-ito",
+   "svc-sql",
+   "group:Helpdesk"
+  ]
+ },
+ {
+  "name": "Helpdesk",
+  "members": [
+   "helpdesk1",
+   "helpdesk2"
+  ]
+ },
+ {
+  "name": "Web-Apps",
+  "members": [
+   "svc-web"
+  ]
+ },
+ {
+  "name": "Domain Users",
+  "members": [
+   "Administrator",
+   "adm-sato",
+   "adm-ito",
+   "adm-old",
+   "svc-bkup",
+   "svc-sql",
+   "svc-web",
+   "ext-yamada",
+   "old-test",
+   "helpdesk1",
+   "helpdesk2",
+   "suzuki",
+   "takahashi",
+   "watanabe",
+   "yamamoto",
+   "nakamura",
+   "kobayashi",
+   "kato",
+   "yoshida",
+   "yamada",
+   "sasaki",
+   "matsumoto",
+   "inoue",
+   "kimura",
+   "shimizu",
+   "hayashi",
+   "saito"
+  ]
+ },
+ {
+  "name": "Partners",
+  "members": [
+   "ext-yamada"
+  ]
+ }
+]
