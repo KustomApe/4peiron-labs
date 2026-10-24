@@ -1,0 +1,26 @@
+[
+  {
+    "photo": "photos/p01.jpg",
+    "posted_at": "2026-05-16T18:12:00+09:00",
+    "caption": "仕事帰りに寄り道。今日の夕焼けはすごかった",
+    "quality": "original"
+  },
+  {
+    "photo": "photos/p02.jpg",
+    "posted_at": "2026-05-03T10:40:00+09:00",
+    "caption": "こむぎ、日向ぼっこ中",
+    "quality": "standard"
+  },
+  {
+    "photo": "photos/p03.jpg",
+    "posted_at": "2026-04-26T14:05:00+09:00",
+    "caption": "休日のラテ",
+    "quality": "standard"
+  },
+  {
+    "photo": "photos/p04.jpg",
+    "posted_at": "2026-04-12T21:30:00+09:00",
+    "caption": "自宅の作業机を片付けた",
+    "quality": "standard"
+  }
+]

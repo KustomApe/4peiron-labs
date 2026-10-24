@@ -17,7 +17,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: 調査用のイメージをビルドする
-        run: docker build -t 4peiron-labs/analyst:1 _base
+        run: docker build -t 4peiron-labs/analyst:2 _base
 
       - name: 決まりを確かめる
         run: python3 tools/check_labs.py
