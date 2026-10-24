@@ -1,0 +1,10 @@
+{
+  "login": "hikari-mnt",
+  "name": "Hikari Minato",
+  "bio": "Backend. Payments. Cats.",
+  "company": "@sample-corp",
+  "public_repos": [
+    "dotfiles",
+    "kotlin-playground"
+  ]
+}

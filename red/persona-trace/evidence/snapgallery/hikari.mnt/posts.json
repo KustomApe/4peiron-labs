@@ -1,0 +1,20 @@
+[
+  {
+    "photo": "photos/p01.jpg",
+    "posted_at": "2026-05-10T13:20:00+09:00",
+    "caption": "久しぶりに梅田まで",
+    "quality": "original"
+  },
+  {
+    "photo": "photos/p02.jpg",
+    "posted_at": "2026-04-29T09:00:00+09:00",
+    "caption": "もち、朝からご機嫌",
+    "quality": "standard"
+  },
+  {
+    "photo": "photos/p03.jpg",
+    "posted_at": "2026-04-18T15:45:00+09:00",
+    "caption": "新しいカフェ",
+    "quality": "standard"
+  }
+]

@@ -38,7 +38,7 @@ docker compose down -v
 |---|---|
 | 基礎 | `foundation/linux-audit`, `foundation/network-logs`, `foundation/web-auth` |
 | ブルー | `blue/ssh-bruteforce`, `blue/web-incident`, `blue/windows-timeline` |
-| レッド | `red/surface-inventory`, `red/webapp-findings`, `red/access-review`, `red/ad-review`, `red/report-triage` |
+| レッド | `red/surface-inventory`, `red/webapp-findings`, `red/access-review`, `red/ad-review`, `red/report-triage`, `red/persona-trace` |
 | パープル | `purple/exercise-review`, `purple/detection-tuning`, `purple/coverage-map`, `purple/fp-triage` |
 
 ### レッドとパープルのラボの形

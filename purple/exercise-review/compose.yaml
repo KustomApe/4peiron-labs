@@ -2,7 +2,7 @@
 services:
   analyst:
     build: ../../_base
-    image: 4peiron-labs/analyst:1
+    image: 4peiron-labs/analyst:2
     network_mode: none
     read_only: true
     cap_drop: [ALL]

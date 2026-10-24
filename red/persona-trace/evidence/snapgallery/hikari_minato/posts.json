@@ -1,0 +1,14 @@
+[
+  {
+    "photo": "photos/p01.jpg",
+    "posted_at": "2026-05-05T07:10:00+09:00",
+    "caption": "朝の稜線",
+    "quality": "standard"
+  },
+  {
+    "photo": "photos/p02.jpg",
+    "posted_at": "2026-04-04T16:30:00+09:00",
+    "caption": "春の山はまだ寒い",
+    "quality": "standard"
+  }
+]
