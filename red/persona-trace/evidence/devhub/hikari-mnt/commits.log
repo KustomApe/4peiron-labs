@@ -1,0 +1,41 @@
+repo: dotfiles
+commit 1c944e18395baef7a69af4600e90a787498a9afe
+Author: hikari-mnt <8812043+hikari-mnt@users.noreply.devhub.example>
+Date:   Mon Mar 02 22:14:09 2026 +0900
+
+    zshrc を整理
+
+repo: dotfiles
+commit 4319ba2ad72c62f219599875ecaa52784a8c1e8d
+Author: hikari-mnt <8812043+hikari-mnt@users.noreply.devhub.example>
+Date:   Sun Mar 15 11:02:51 2026 +0900
+
+    tmux の設定を追加
+
+repo: kotlin-playground
+commit 4636a3f382637ca6b7b18d6c20ce4341a059e69c
+Author: Hikari Minato <hikari.minato@example.co.jp>
+Date:   Mon Apr 20 12:33:40 2026 +0900
+
+    Add retry helper
+
+repo: kotlin-playground
+commit bcb8daf73161fd34825e7dfc8774a860c3b284a7
+Author: hikari-mnt <8812043+hikari-mnt@users.noreply.devhub.example>
+Date:   Sat Apr 25 21:47:18 2026 +0900
+
+    README を更新
+
+repo: kotlin-playground
+commit 4db50cf7c083d9a8c60ed6eb2789519bdb630b16
+Author: Hikari Minato <hikari.minato@example.co.jp>
+Date:   Thu May 07 12:18:02 2026 +0900
+
+    Fix rounding in amount formatter
+
+repo: dotfiles
+commit 42272e20923a2b92c23a73a2566532a4dfd1aa51
+Author: hikari-mnt <8812043+hikari-mnt@users.noreply.devhub.example>
+Date:   Sat May 23 10:05:37 2026 +0900
+
+    vim のプラグインを入れ替え
