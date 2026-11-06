@@ -1,0 +1,36 @@
+[
+  {
+    "id": "EX-01",
+    "rule": "D2",
+    "match": {
+      "user": "cfgmgr",
+      "exe": "/usr/bin/python3"
+    },
+    "valid_from": "2026-01-01T00:00:00Z",
+    "valid_until": "2026-12-31T23:59:59Z",
+    "reason": "構成管理が毎晩 sudoers.d/10-deploy を配り直す",
+    "owner": "infra@example.com"
+  },
+  {
+    "id": "EX-02",
+    "rule": "D2",
+    "match": {
+      "user": "ops-tmp"
+    },
+    "valid_from": "2026-10-20T00:00:00Z",
+    "valid_until": "2026-10-25T23:59:59Z",
+    "reason": "db01 の移行作業（CHG-0412）のあいだだけ、作業用アカウントに sudoers を触らせる",
+    "owner": "infra@example.com"
+  },
+  {
+    "id": "EX-03",
+    "rule": "D3",
+    "match": {
+      "client_ip": "192.0.2.10"
+    },
+    "valid_from": "2026-10-26T01:00:00Z",
+    "valid_until": "2026-10-26T03:00:00Z",
+    "reason": "委託先による月次の脆弱性診断（作業届 SEC-2026-10）",
+    "owner": "soc@example.com"
+  }
+]

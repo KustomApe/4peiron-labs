@@ -1,0 +1,15 @@
+# web01 の sshd の設定（/etc/ssh/sshd_config の写し）
+Include /etc/ssh/sshd_config.d/*.conf
+
+Port 22
+PermitRootLogin prohibit-password
+PubkeyAuthentication yes
+PasswordAuthentication no
+KbdInteractiveAuthentication no
+MaxAuthTries 6
+LoginGraceTime 1m
+UsePAM yes
+X11Forwarding yes
+PrintMotd no
+AcceptEnv LANG LC_*
+Subsystem sftp /usr/lib/openssh/sftp-server

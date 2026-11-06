@@ -1,0 +1,252 @@
+[
+ {
+  "name": "同じ送信元から 1 分で 6 回失敗",
+  "name_en": "Six failures from one source in a minute",
+  "events": [
+   {
+    "id": "T1-0",
+    "time": "2026-10-10T10:00:00Z",
+    "host": "web01",
+    "source": "sshd",
+    "result": "failure",
+    "user": "root",
+    "src_ip": "203.0.113.250",
+    "reason": "bad_password"
+   },
+   {
+    "id": "T1-1",
+    "time": "2026-10-10T10:00:10Z",
+    "host": "web01",
+    "source": "sshd",
+    "result": "failure",
+    "user": "root",
+    "src_ip": "203.0.113.250",
+    "reason": "bad_password"
+   },
+   {
+    "id": "T1-2",
+    "time": "2026-10-10T10:00:20Z",
+    "host": "web01",
+    "source": "sshd",
+    "result": "failure",
+    "user": "root",
+    "src_ip": "203.0.113.250",
+    "reason": "bad_password"
+   },
+   {
+    "id": "T1-3",
+    "time": "2026-10-10T10:00:30Z",
+    "host": "web01",
+    "source": "sshd",
+    "result": "failure",
+    "user": "root",
+    "src_ip": "203.0.113.250",
+    "reason": "bad_password"
+   },
+   {
+    "id": "T1-4",
+    "time": "2026-10-10T10:00:40Z",
+    "host": "web01",
+    "source": "sshd",
+    "result": "failure",
+    "user": "root",
+    "src_ip": "203.0.113.250",
+    "reason": "bad_password"
+   },
+   {
+    "id": "T1-5",
+    "time": "2026-10-10T10:00:50Z",
+    "host": "web01",
+    "source": "sshd",
+    "result": "failure",
+    "user": "root",
+    "src_ip": "203.0.113.250",
+    "reason": "bad_password"
+   }
+  ],
+  "expect": [
+   "203.0.113.250"
+  ]
+ },
+ {
+  "name": "4 回だけなら鳴らない",
+  "name_en": "Only four failures: no alert",
+  "events": [
+   {
+    "id": "T2-0",
+    "time": "2026-10-10T10:00:00Z",
+    "host": "web01",
+    "source": "sshd",
+    "result": "failure",
+    "user": "root",
+    "src_ip": "203.0.113.251",
+    "reason": "bad_password"
+   },
+   {
+    "id": "T2-1",
+    "time": "2026-10-10T10:00:10Z",
+    "host": "web01",
+    "source": "sshd",
+    "result": "failure",
+    "user": "root",
+    "src_ip": "203.0.113.251",
+    "reason": "bad_password"
+   },
+   {
+    "id": "T2-2",
+    "time": "2026-10-10T10:00:20Z",
+    "host": "web01",
+    "source": "sshd",
+    "result": "failure",
+    "user": "root",
+    "src_ip": "203.0.113.251",
+    "reason": "bad_password"
+   },
+   {
+    "id": "T2-3",
+    "time": "2026-10-10T10:00:30Z",
+    "host": "web01",
+    "source": "sshd",
+    "result": "failure",
+    "user": "root",
+    "src_ip": "203.0.113.251",
+    "reason": "bad_password"
+   }
+  ],
+  "expect": []
+ },
+ {
+  "name": "成功は数えない",
+  "name_en": "Successes do not count",
+  "events": [
+   {
+    "id": "T3-0",
+    "time": "2026-10-10T10:00:00Z",
+    "host": "web01",
+    "source": "sshd",
+    "result": "failure",
+    "user": "root",
+    "src_ip": "203.0.113.252",
+    "reason": "bad_password"
+   },
+   {
+    "id": "T3-1",
+    "time": "2026-10-10T10:00:10Z",
+    "host": "web01",
+    "source": "sshd",
+    "result": "success",
+    "user": "root",
+    "src_ip": "203.0.113.252",
+    "method": "publickey"
+   },
+   {
+    "id": "T3-2",
+    "time": "2026-10-10T10:00:20Z",
+    "host": "web01",
+    "source": "sshd",
+    "result": "failure",
+    "user": "root",
+    "src_ip": "203.0.113.252",
+    "reason": "bad_password"
+   },
+   {
+    "id": "T3-3",
+    "time": "2026-10-10T10:00:30Z",
+    "host": "web01",
+    "source": "sshd",
+    "result": "success",
+    "user": "root",
+    "src_ip": "203.0.113.252",
+    "method": "publickey"
+   },
+   {
+    "id": "T3-4",
+    "time": "2026-10-10T10:00:40Z",
+    "host": "web01",
+    "source": "sshd",
+    "result": "failure",
+    "user": "root",
+    "src_ip": "203.0.113.252",
+    "reason": "bad_password"
+   },
+   {
+    "id": "T3-5",
+    "time": "2026-10-10T10:00:50Z",
+    "host": "web01",
+    "source": "sshd",
+    "result": "failure",
+    "user": "root",
+    "src_ip": "203.0.113.252",
+    "reason": "bad_password"
+   }
+  ],
+  "expect": []
+ },
+ {
+  "name": "送信元が違えば別に数える",
+  "name_en": "Different sources are counted separately",
+  "events": [
+   {
+    "id": "T4-0",
+    "time": "2026-10-10T10:00:00Z",
+    "host": "web01",
+    "source": "sshd",
+    "result": "failure",
+    "user": "root",
+    "src_ip": "203.0.113.254",
+    "reason": "bad_password"
+   },
+   {
+    "id": "T4-1",
+    "time": "2026-10-10T10:00:10Z",
+    "host": "web01",
+    "source": "sshd",
+    "result": "failure",
+    "user": "root",
+    "src_ip": "203.0.113.253",
+    "reason": "bad_password"
+   },
+   {
+    "id": "T4-2",
+    "time": "2026-10-10T10:00:20Z",
+    "host": "web01",
+    "source": "sshd",
+    "result": "failure",
+    "user": "root",
+    "src_ip": "203.0.113.254",
+    "reason": "bad_password"
+   },
+   {
+    "id": "T4-3",
+    "time": "2026-10-10T10:00:30Z",
+    "host": "web01",
+    "source": "sshd",
+    "result": "failure",
+    "user": "root",
+    "src_ip": "203.0.113.253",
+    "reason": "bad_password"
+   },
+   {
+    "id": "T4-4",
+    "time": "2026-10-10T10:00:40Z",
+    "host": "web01",
+    "source": "sshd",
+    "result": "failure",
+    "user": "root",
+    "src_ip": "203.0.113.254",
+    "reason": "bad_password"
+   },
+   {
+    "id": "T4-5",
+    "time": "2026-10-10T10:00:50Z",
+    "host": "web01",
+    "source": "sshd",
+    "result": "failure",
+    "user": "root",
+    "src_ip": "203.0.113.253",
+    "reason": "bad_password"
+   }
+  ],
+  "expect": []
+ }
+]
