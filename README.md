@@ -6,6 +6,7 @@
 
 - **どのラボも、あなたの PC の中だけで動きます。** ホストのポートは開けず、外のネットワークにもつながりません。
 - いまあるのは、どのトラックも**調査型のラボ**です。ログ・設定などの証拠を読み取り専用で読みます。コンテナはネットワークにつながらず、**攻撃する標的はありません。**
+- ブルーの `detection-rules` と `hardening-fix` は、読むだけでなく**書いたもの・直したものを確かめる**ラボです。検知ルールや設定の写しをホームに書き、ラボの中のスクリプトが判定して、通ったらフラグを出します。
 - **ラボで使った手順を、ほかの機器やサービスに向けてはいけません。**
 - 登場するドメイン・IP アドレス・会社・人物・認証情報はすべて架空です（`example.com`、文書用の IP アドレス帯）。
 - 使う前に、サイトの「法律と倫理」コースと、ラボ利用の同意を読んでください。
@@ -37,7 +38,7 @@ docker compose down -v
 | トラック | ディレクトリ |
 |---|---|
 | 基礎 | `foundation/linux-audit`, `foundation/network-logs`, `foundation/web-auth` |
-| ブルー | `blue/ssh-bruteforce`, `blue/web-incident`, `blue/windows-timeline` |
+| ブルー | `blue/ssh-bruteforce`, `blue/web-incident`, `blue/windows-timeline`, `blue/detection-rules`, `blue/hardening-fix` |
 | レッド | `red/surface-inventory`, `red/webapp-findings`, `red/access-review`, `red/ad-review`, `red/report-triage`, `red/persona-trace` |
 | パープル | `purple/exercise-review`, `purple/detection-tuning`, `purple/coverage-map`, `purple/fp-triage` |
 
@@ -55,6 +56,7 @@ Sample Corp. You submit the answers on the site as `4P{...}` flags.
 
 - **Every lab runs only inside your own PC.** No host ports are opened and nothing connects to outside networks.
 - Every lab so far, in every track, is an **investigation lab**: you read logs and configuration as read-only evidence, the container has no network access, and **there is no target to attack.**
+- The blue labs `detection-rules` and `hardening-fix` check **what you write or fix**: you write detection rules or edit a copy of the configuration in your home directory, and a script inside the lab grades it and prints a flag when it passes.
 - Red labs are a pre-assessment requested by the defenders: you read fictional asset lists, DNS zones, config exports and assessment logs, find the weak spots and rank them.
 - Purple labs have you read the same fictional incident from both the attacker's record and the defenders' logs, and match what was detected and what was missed.
 - Rules for labs with a local practice target are in [docs/rules.md](docs/rules.md), but none exist yet; whether to build one is a separate, later decision.

@@ -1,0 +1,200 @@
+[
+ {
+  "name": "1 分で 3 種類",
+  "name_en": "Three kinds in a minute",
+  "events": [
+   {
+    "id": "T1-1",
+    "time": "2026-10-10T10:00:00Z",
+    "host": "web01",
+    "source": "web",
+    "client_ip": "203.0.113.240",
+    "method": "GET",
+    "path": "/.env",
+    "query": "",
+    "status": 404,
+    "user_agent": "test"
+   },
+   {
+    "id": "T1-2",
+    "time": "2026-10-10T10:00:20Z",
+    "host": "web01",
+    "source": "web",
+    "client_ip": "203.0.113.240",
+    "method": "GET",
+    "path": "/wp-login.php",
+    "query": "",
+    "status": 404,
+    "user_agent": "test"
+   },
+   {
+    "id": "T1-3",
+    "time": "2026-10-10T10:00:40Z",
+    "host": "web01",
+    "source": "web",
+    "client_ip": "203.0.113.240",
+    "method": "GET",
+    "path": "/server-status",
+    "query": "",
+    "status": 404,
+    "user_agent": "test"
+   }
+  ],
+  "expect": [
+   "203.0.113.240"
+  ]
+ },
+ {
+  "name": "同じものを何度叩いても 1 種類",
+  "name_en": "Repeating one path is one kind",
+  "events": [
+   {
+    "id": "T2-0",
+    "time": "2026-10-10T10:00:00Z",
+    "host": "web01",
+    "source": "web",
+    "client_ip": "203.0.113.241",
+    "method": "GET",
+    "path": "/.env",
+    "query": "",
+    "status": 404,
+    "user_agent": "test"
+   },
+   {
+    "id": "T2-1",
+    "time": "2026-10-10T10:00:10Z",
+    "host": "web01",
+    "source": "web",
+    "client_ip": "203.0.113.241",
+    "method": "GET",
+    "path": "/.env",
+    "query": "",
+    "status": 404,
+    "user_agent": "test"
+   },
+   {
+    "id": "T2-2",
+    "time": "2026-10-10T10:00:20Z",
+    "host": "web01",
+    "source": "web",
+    "client_ip": "203.0.113.241",
+    "method": "GET",
+    "path": "/.env",
+    "query": "",
+    "status": 404,
+    "user_agent": "test"
+   },
+   {
+    "id": "T2-3",
+    "time": "2026-10-10T10:00:30Z",
+    "host": "web01",
+    "source": "web",
+    "client_ip": "203.0.113.241",
+    "method": "GET",
+    "path": "/.env",
+    "query": "",
+    "status": 404,
+    "user_agent": "test"
+   },
+   {
+    "id": "T2-4",
+    "time": "2026-10-10T10:00:40Z",
+    "host": "web01",
+    "source": "web",
+    "client_ip": "203.0.113.241",
+    "method": "GET",
+    "path": "/.env",
+    "query": "",
+    "status": 404,
+    "user_agent": "test"
+   }
+  ],
+  "expect": []
+ },
+ {
+  "name": "許可した診断（EX-03 の時間内）",
+  "name_en": "The approved scan (inside EX-03)",
+  "events": [
+   {
+    "id": "T3-0",
+    "time": "2026-10-26T01:10:00Z",
+    "host": "web01",
+    "source": "web",
+    "client_ip": "192.0.2.10",
+    "method": "GET",
+    "path": "/.env",
+    "query": "",
+    "status": 404,
+    "user_agent": "test"
+   },
+   {
+    "id": "T3-1",
+    "time": "2026-10-26T01:10:10Z",
+    "host": "web01",
+    "source": "web",
+    "client_ip": "192.0.2.10",
+    "method": "GET",
+    "path": "/wp-login.php",
+    "query": "",
+    "status": 404,
+    "user_agent": "test"
+   },
+   {
+    "id": "T3-2",
+    "time": "2026-10-26T01:10:20Z",
+    "host": "web01",
+    "source": "web",
+    "client_ip": "192.0.2.10",
+    "method": "GET",
+    "path": "/server-status",
+    "query": "",
+    "status": 404,
+    "user_agent": "test"
+   }
+  ],
+  "expect": []
+ },
+ {
+  "name": "クエリの中は見ない",
+  "name_en": "The query string is not the path",
+  "events": [
+   {
+    "id": "T4-0",
+    "time": "2026-10-10T10:00:00Z",
+    "host": "web01",
+    "source": "web",
+    "client_ip": "203.0.113.242",
+    "method": "GET",
+    "path": "/search",
+    "query": "q=/.env",
+    "status": 404,
+    "user_agent": "test"
+   },
+   {
+    "id": "T4-1",
+    "time": "2026-10-10T10:00:10Z",
+    "host": "web01",
+    "source": "web",
+    "client_ip": "203.0.113.242",
+    "method": "GET",
+    "path": "/search",
+    "query": "q=/wp-login.php",
+    "status": 404,
+    "user_agent": "test"
+   },
+   {
+    "id": "T4-2",
+    "time": "2026-10-10T10:00:20Z",
+    "host": "web01",
+    "source": "web",
+    "client_ip": "203.0.113.242",
+    "method": "GET",
+    "path": "/search",
+    "query": "q=/server-status",
+    "status": 404,
+    "user_agent": "test"
+   }
+  ],
+  "expect": []
+ }
+]

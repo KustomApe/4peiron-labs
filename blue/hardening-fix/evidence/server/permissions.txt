@@ -1,0 +1,16 @@
+# web01 のファイルの権限の書き出し（stat -c '%a %U %G %n' の結果）。直すときは、この表の値を直す
+0644 root root /etc/passwd
+0644 root shadow /etc/shadow
+0644 root root /etc/group
+0440 root root /etc/sudoers
+0440 root root /etc/sudoers.d/10-deploy
+0644 root root /etc/sudoers.d/20-ops
+0440 root root /etc/sudoers.d/90-tanaka
+0644 root root /etc/ssh/sshd_config
+0644 root root /etc/ssh/ssh_host_ed25519_key
+0644 root root /etc/ssh/ssh_host_ed25519_key.pub
+0755 deploy deploy /home/deploy/.ssh
+0664 deploy deploy /home/deploy/.ssh/authorized_keys
+1777 root root /tmp
+0755 www-data www-data /var/www/members/static
+0777 www-data www-data /var/www/members/uploads

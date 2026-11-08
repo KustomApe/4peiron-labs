@@ -1,0 +1,2 @@
+# インフラ担当
+%ops ALL=(ALL:ALL) NOPASSWD: ALL

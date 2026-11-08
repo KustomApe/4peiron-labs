@@ -1,0 +1,10 @@
+# 探りに使われやすいパス。1 行 1 つ。大文字と小文字は区別しない。
+# 「/」で終わるものは、その下のどのパスも同じ 1 種類として数える。
+/.env
+/.git/
+/wp-login.php
+/phpmyadmin/
+/server-status
+/.aws/credentials
+/config.php.bak
+/actuator/env

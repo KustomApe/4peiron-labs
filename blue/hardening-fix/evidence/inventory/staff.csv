@@ -1,0 +1,7 @@
+user,name,team,status,left_on,ssh,sudo
+sato,佐藤 健,インフラ,在籍,,yes,yes
+suzuki,鈴木 美咲,インフラ,在籍,,yes,yes
+tanaka,田中 誠,インフラ,退職,2026-10-15,no,no
+yamada,山田 翔,開発,在籍,,yes,no
+kobayashi,小林 葵,営業企画,在籍,,no,no
+deploy,（CI のデプロイ）,サービス,在籍,,yes,no

@@ -1,0 +1,2 @@
+# CI のデプロイ用。アプリの再起動と、ログの確認
+deploy ALL=(root) NOPASSWD: /usr/bin/systemctl restart members, /usr/bin/less /var/log/members/*

@@ -1,0 +1,82 @@
+[
+ {
+  "name": "外から入って 3 分後に sudo",
+  "name_en": "sudo three minutes after an outside login",
+  "events": [
+   {
+    "id": "T1-1",
+    "time": "2026-10-10T10:00:00Z",
+    "host": "web01",
+    "source": "sshd",
+    "result": "success",
+    "user": "alice",
+    "src_ip": "203.0.113.230",
+    "method": "publickey"
+   },
+   {
+    "id": "T1-2",
+    "time": "2026-10-10T10:03:00Z",
+    "host": "web01",
+    "source": "sudo",
+    "user": "alice",
+    "run_as": "root",
+    "command": "systemctl status members"
+   }
+  ],
+  "expect": [
+   "T1-2"
+  ]
+ },
+ {
+  "name": "社内（10.0.0.0/8）からなら鳴らない",
+  "name_en": "From inside (10.0.0.0/8): no alert",
+  "events": [
+   {
+    "id": "T2-1",
+    "time": "2026-10-10T10:00:00Z",
+    "host": "web01",
+    "source": "sshd",
+    "result": "success",
+    "user": "alice",
+    "src_ip": "10.0.1.50",
+    "method": "publickey"
+   },
+   {
+    "id": "T2-2",
+    "time": "2026-10-10T10:03:00Z",
+    "host": "web01",
+    "source": "sudo",
+    "user": "alice",
+    "run_as": "root",
+    "command": "systemctl status members"
+   }
+  ],
+  "expect": []
+ },
+ {
+  "name": "別の人の sudo",
+  "name_en": "Someone else's sudo",
+  "events": [
+   {
+    "id": "T3-1",
+    "time": "2026-10-10T10:00:00Z",
+    "host": "web01",
+    "source": "sshd",
+    "result": "success",
+    "user": "alice",
+    "src_ip": "203.0.113.231",
+    "method": "publickey"
+   },
+   {
+    "id": "T3-2",
+    "time": "2026-10-10T10:03:00Z",
+    "host": "web01",
+    "source": "sudo",
+    "user": "bob",
+    "run_as": "root",
+    "command": "systemctl status members"
+   }
+  ],
+  "expect": []
+ }
+]
