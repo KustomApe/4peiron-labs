@@ -86,7 +86,7 @@ the bytes sent back.
 ## Hints
 
 1. Check the column order first with `grep '^#fields' dns.log`. Counting per pair of client and domain, for example `grep -v '^#' dns.log | awk -F'\t' '{print $3, $10}' | sort | uniq -c | sort -rn | head`, makes outliers stand out. A high count alone may just mean a popular site; also check whether only one client asks for that domain.
-2. List the `ts` values of the pair you found and compute the difference between neighbouring lines with `awk`. `date -u -d @1789398000` turns a UNIX time into a readable date.
+2. List the `ts` values of the pair you found and compute the difference between neighboring lines with `awk`. `date -u -d @1789398000` turns a UNIX time into a readable date.
 3. Do not mix up `orig_bytes` (sent) and `resp_bytes` (received); large downloads do not count. Leave out destinations starting with `10.`, which are internal. An `awk` associative array (e.g. `sum[$5":"$6] += $10`) gives you a total per pair.
 
 ## Clean up
