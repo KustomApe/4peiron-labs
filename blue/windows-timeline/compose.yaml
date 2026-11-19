@@ -2,7 +2,10 @@
 services:
   analyst:
     build: ../../_base
-    image: 4peiron-labs/analyst:2
+    image: 4peiron-labs/analyst:3
+    # 動作確認用の合言葉（#405）。ラボごとに別の値。シェルを開くと 4P-CHECK{…} として出る
+    environment:
+      LAB_CHECK: kawa-f929
     network_mode: none
     read_only: true
     cap_drop: [ALL]
