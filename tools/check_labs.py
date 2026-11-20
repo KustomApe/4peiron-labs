@@ -136,6 +136,38 @@ def check_files(lab: Path, config: dict) -> list[str]:
         problems.append("README.md に「## English」の節が無い")
     if not is_target_lab(config) and not (lab / "evidence").is_dir():
         problems.append("evidence/ が無い")
+    problems += check_writeups(lab, text)
+    return problems
+
+
+def check_writeups(lab: Path, readme: str) -> list[str]:
+    """フラグごとの解説（writeups.md）の決まり。無くてもよい（4peiron.dev#375）。
+
+    サイトは、そのフラグを取った人にだけ出す。公開リポジトリに置く以上、
+    平文のフラグ（4P{...}）は書かない（4peiron.dev の FR-LAB-06）。
+    """
+    path = lab / "writeups.md"
+    if not path.is_file():
+        return []
+    text = path.read_text()
+    problems = []
+    if "4P{" in text:
+        problems.append("writeups.md に 4P{ がある（平文のフラグは書かない）")
+    if not re.search(r"^## English", text, re.M):
+        problems.append("writeups.md に「## English」の節が無い")
+        return problems
+    ja, _, en = text.partition("\n## English")
+    ja_names = re.findall(r"^## `([^`]+)`", ja, re.M)
+    en_names = re.findall(r"^### `([^`]+)`", en, re.M)
+    if not ja_names:
+        problems.append("writeups.md に「## `フラグ名`」の見出しが無い")
+    if ja_names != en_names:
+        problems.append(f"writeups.md の日英でフラグ名の並びが違う: {ja_names} / {en_names}")
+    for name in ja_names:
+        if f"`{name}`" not in readme:
+            problems.append(f"writeups.md のフラグ名 {name} が README の設問に無い")
+    if len(ja_names) != len(set(ja_names)):
+        problems.append("writeups.md に同じフラグ名の見出しが 2 つある")
     return problems
 
 

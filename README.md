@@ -31,7 +31,7 @@ docker compose exec analyst bash      # /evidence に証拠があります
 docker compose down -v
 ```
 
-設問とヒントは各ラボの `README.md` にあります。
+設問とヒントは各ラボの `README.md` にあります。フラグを取ったあとに読む解説（調べ方・考え方・検知と対策）は、書いてあるラボの `writeups.md` にあり、サイトではそのフラグを取った人にだけ表示されます。答えそのものは書きません。
 
 ## ラボの一覧
 
@@ -66,7 +66,7 @@ Sample Corp. You submit the answers on the site as `4P{...}` flags.
 - The rules every lab follows are in [docs/rules.md](docs/rules.md) and are checked in CI.
 
 Run `docker compose up -d` in a lab directory, then `docker compose exec analyst bash`; the evidence
-is in `/evidence`. Clean up with `docker compose down -v`. Questions and hints are in each lab's `README.md`.
+is in `/evidence`. Clean up with `docker compose down -v`. Questions and hints are in each lab's `README.md`. Write-ups to read after capturing a flag (how to investigate, the reasoning, detection and defense) are in `writeups.md` in the labs that have one; the site shows each only to people who captured that flag. They never contain the answers.
 
 ## License
 
