@@ -26,6 +26,7 @@
 | `README.md` に日本語と `## English` の両方がある | ○ |
 | 登場するドメイン・IP アドレス・会社・人物・認証情報はすべて架空。ドメインは `example.com` `example.co.jp` や `.example` `.test`、IP アドレスは文書用（`192.0.2.0/24` `198.51.100.0/24` `203.0.113.0/24`）かプライベートの帯 | 警告 |
 | 片付け方（`docker compose down -v`）を README に書く | |
+| 調査用のコンテナ（`analyst`）に、ラボごとに別の動作確認用の合言葉 `LAB_CHECK` を `environment:` で持たせ、`image:` の版を `_base/Dockerfile` の `LABS_IMAGE_VERSION` とそろえる（下の「動作確認用の合言葉」） | ○ |
 
 ## 標的を置くラボ
 
@@ -89,3 +90,14 @@ Every lab here runs **only inside the learner's own PC and never connects to any
   `restart:` policy, and the README has `## 標的について` and `### About the target` sections.
 - **Target applications are written and reviewed by people.** Propose the lab in an issue first
   (scenario, what it teaches, which weaknesses, outline of the questions) and start once it is agreed.
+
+## 動作確認用の合言葉
+
+受講者が、フラグが見つからないときに「解き方が悪いのか、環境がうまく起動していないのか」を切り分けられるようにするためのものです（4peiron.dev #405）。
+
+- シェルを開くと（`docker compose exec analyst bash`）、`4P-CHECK{<LAB_CHECK>-v<イメージの版>}` が出ます。あとから `lab-check` と打っても出ます（`_base/lab-check.sh`）
+- `/evidence` が空のとき（ラボのディレクトリの外で起動した、など）は、合言葉の代わりに直し方を出します
+- サイトはこの合言葉のハッシュだけを持ち、入れてもらうと「環境は正しく動いています」と返します。**点数にはなりません**
+- 新しいラボを足すときは、ほかのラボと重ならない `LAB_CHECK`（英小文字・数字・`-`）を決め、サイトの seed（`labs.lab` の `check_hash`）にもハッシュを入れます
+- `_base/Dockerfile` を変えたら `LABS_IMAGE_VERSION` を上げ、どのラボの `image:` の版も合わせます。合言葉も変わるので、サイトの seed のハッシュも入れ直します（4peiron.dev の `tools/labs/check_flags.py --show` が新しいハッシュを出します）
+

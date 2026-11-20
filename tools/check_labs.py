@@ -171,6 +171,35 @@ def check_writeups(lab: Path, readme: str) -> list[str]:
     return problems
 
 
+IMAGE_VERSION = re.compile(r"^ENV LABS_IMAGE_VERSION=(\d+)", re.M)
+LAB_CHECK = re.compile(r"^[a-z0-9-]{4,40}$")
+
+
+def image_version() -> str:
+    """_base/Dockerfile のイメージの版（動作確認用の合言葉にも入る。#405）。"""
+    m = IMAGE_VERSION.search((ROOT / "_base" / "Dockerfile").read_text())
+    return m.group(1) if m else ""
+
+
+def check_lab_check(config: dict, seen: dict[str, str], name: str) -> list[str]:
+    """調査用のコンテナに、ラボごとに別の動作確認用の合言葉（LAB_CHECK）があり、イメージの版がそろっているか。"""
+    problems = []
+    analyst = config.get("services", {}).get("analyst")
+    if analyst is None:
+        return ["analyst のサービスが無い"]
+    token = (analyst.get("environment") or {}).get("LAB_CHECK") or ""
+    if not LAB_CHECK.match(token):
+        problems.append("analyst: environment に LAB_CHECK（英小文字・数字・- の 4〜40 字）が無い")
+    elif token in seen:
+        problems.append(f"analyst: LAB_CHECK が {seen[token]} と同じ（ラボごとに別の値にする）")
+    else:
+        seen[token] = name
+    version = image_version()
+    if version and (analyst.get("image") or "") != f"4peiron-labs/analyst:{version}":
+        problems.append(f"analyst: image が 4peiron-labs/analyst:{version} でない（_base/Dockerfile の LABS_IMAGE_VERSION と同じにする）")
+    return problems
+
+
 def read_text(path: Path) -> str:
     raw = path.read_bytes()
     if path.suffix == ".gz":
@@ -201,6 +230,7 @@ def scan_evidence(lab: Path) -> list[str]:
 
 def main(args: list[str]) -> int:
     failed = False
+    seen: dict[str, str] = {}  # LAB_CHECK → ラボ。どのラボも別の値にする
     for lab in lab_dirs(args):
         name = lab.relative_to(ROOT)
         try:
@@ -209,7 +239,7 @@ def main(args: list[str]) -> int:
             print(f"NG    {name}: docker compose config が通らない — {e}")
             failed = True
             continue
-        problems = check_compose(lab, config) + check_files(lab, config)
+        problems = check_compose(lab, config) + check_files(lab, config) + check_lab_check(config, seen, str(name))
         if is_target_lab(config):
             problems += check_target_lab(lab, config)
         for p in problems:

@@ -31,6 +31,10 @@ docker compose exec analyst bash      # /evidence に証拠があります
 docker compose down -v
 ```
 
+シェルを開くと、**動作確認用の合言葉**（`4P-CHECK{...}`）が出ます。サイトのラボのページに入れると、
+環境が正しく動いているかを確かめられます（点数にはなりません）。合わないときや、合言葉が出ないときは、
+`docker compose up -d --build` でイメージを作り直してください。
+
 設問とヒントは各ラボの `README.md` にあります。フラグを取ったあとに読む解説（調べ方・考え方・検知と対策）は、書いてあるラボの `writeups.md` にあり、サイトではそのフラグを取った人にだけ表示されます。答えそのものは書きません。
 
 ## ラボの一覧
@@ -66,7 +70,7 @@ Sample Corp. You submit the answers on the site as `4P{...}` flags.
 - The rules every lab follows are in [docs/rules.md](docs/rules.md) and are checked in CI.
 
 Run `docker compose up -d` in a lab directory, then `docker compose exec analyst bash`; the evidence
-is in `/evidence`. Clean up with `docker compose down -v`. Questions and hints are in each lab's `README.md`. Write-ups to read after capturing a flag (how to investigate, the reasoning, detection and defense) are in `writeups.md` in the labs that have one; the site shows each only to people who captured that flag. They never contain the answers.
+is in `/evidence`. Clean up with `docker compose down -v`. When you open the shell, a **check phrase** (`4P-CHECK{...}`) is shown; enter it on the lab page on the site to confirm your environment works (no points). If it does not match or does not appear, rebuild with `docker compose up -d --build`. Questions and hints are in each lab's `README.md`. Write-ups to read after capturing a flag (how to investigate, the reasoning, detection and defense) are in `writeups.md` in the labs that have one; the site shows each only to people who captured that flag. They never contain the answers.
 
 ## License
 
